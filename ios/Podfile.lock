@@ -1,0 +1,56 @@
+PODS:
+  - dot-camera (7.2.1)
+  - dot-capture (7.2.1)
+  - dot-core (7.2.1)
+  - dot-document (7.2.1):
+    - dot-camera (= 7.2.1)
+    - dot-capture (= 7.2.1)
+    - dot-core (= 7.2.1)
+    - dot-protobuf (= 1.5.0)
+    - sam (= 2.35.2)
+  - dot-protobuf (1.5.0)
+  - dot_core_ios (0.1.0):
+    - dot-core (= 7.2.1)
+    - Flutter
+  - dot_document_ios (0.1.0):
+    - dot-document (= 7.2.1)
+    - Flutter
+  - Flutter (1.0.0)
+  - sam (2.35.2)
+
+DEPENDENCIES:
+  - dot_core_ios (from `.symlinks/plugins/dot_core_ios/ios`)
+  - dot_document_ios (from `.symlinks/plugins/dot_document_ios/ios`)
+  - Flutter (from `Flutter`)
+
+SPEC REPOS:
+  https://github.com/innovatrics/innovatrics-podspecs:
+    - dot-camera
+    - dot-capture
+    - dot-core
+    - dot-document
+    - dot-protobuf
+    - sam
+
+EXTERNAL SOURCES:
+  dot_core_ios:
+    :path: ".symlinks/plugins/dot_core_ios/ios"
+  dot_document_ios:
+    :path: ".symlinks/plugins/dot_document_ios/ios"
+  Flutter:
+    :path: Flutter
+
+SPEC CHECKSUMS:
+  dot-camera: 3407b4d85234e154d03f059c9ed2e783bca99d9e
+  dot-capture: 2733445fcf14e037b904d570147ccc894f136943
+  dot-core: 291bba77c30d523d26198563fe072e1b2a2a9a24
+  dot-document: b7f2566ea7a4acaffafbd08595f7fd38bfa6c292
+  dot-protobuf: 023e0a2cf32c6733768f86eedd2179c64abc6398
+  dot_core_ios: 39543e7a988525f0d15f15741f4d931d27a48318
+  dot_document_ios: c1bdd956df09b5fe2a5771773e893366a7626c7a
+  Flutter: f04841e97a9d0b0a8025694d0796dd46242b2854
+  sam: 5c7e5f0787c3418716ca6e1788973b8b5949311f
+
+PODFILE CHECKSUM: 162ac26ca64d5db1d19d40ad454d8666b3b40138
+
+COCOAPODS: 1.12.1
