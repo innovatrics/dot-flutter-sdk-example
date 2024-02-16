@@ -38,6 +38,8 @@ applicationId 'com.company.dot.flutter.example'
 | Sample                    | Description             |
 |:--------------------------|:------------------------|
 | **Document Auto Capture** | Basic component sample. |
+| **Face Auto Capture**     | Basic component sample. |
+| **MagnifEye Liveness**    | Basic component sample. |
 
 In case when the samples do not work because of the expired DOT license, please contact `support@innovatrics.com` in order to obtain a new license file.
 

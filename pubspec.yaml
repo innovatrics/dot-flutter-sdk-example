@@ -14,7 +14,8 @@ flutter:
 dependencies:
   flutter:
     sdk: flutter
-  dot_document: ^0.1.0
+  dot_document: ^0.2.1
+  dot_face_lite: ^0.2.1
 
 dev_dependencies:
   flutter_test:

@@ -1,16 +1,17 @@
 import 'dart:convert';
 
-import 'package:dot_document/dot_document.dart';
-import 'package:dot_flutter_sdk_example/conversion_extensions.dart';
+import 'package:dot_face_lite/dot_face_lite.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/rendering.dart';
 
-class DocumentAutoCaptureResultScreen extends StatelessWidget {
-  final DocumentAutoCaptureResult _result;
+import '../disposable_raw_image.dart';
+import '../face_auto_capture/conversion_extensions.dart';
+
+class FaceAutoCaptureResultScreen extends StatelessWidget {
+  final FaceAutoCaptureResult _result;
 
   late final Future<RawImage> _image;
 
-  DocumentAutoCaptureResultScreen(this._result) {
+  FaceAutoCaptureResultScreen(this._result) {
     this._image = getImageFromResult(_result);
   }
 
@@ -21,7 +22,7 @@ class DocumentAutoCaptureResultScreen extends StatelessWidget {
 
     return Scaffold(
       appBar: AppBar(
-        title: Text('Document Auto Capture Result'),
+        title: Text('Face Auto Capture Result'),
       ),
       body: SingleChildScrollView(
           child: Column(children: [
@@ -43,20 +44,9 @@ class DocumentAutoCaptureResultScreen extends StatelessWidget {
     );
   }
 
-  Future<RawImage> getImageFromResult(DocumentAutoCaptureResult result) async {
+  Future<RawImage> getImageFromResult(FaceAutoCaptureResult result) async {
     final uiImage = await ImageFactory.create(result.bgraRawImage);
-    return _DisposableRawImage(
+    return DisposableRawImage(
         image: uiImage, color: Colors.black, colorBlendMode: BlendMode.dstOver);
-  }
-}
-
-final class _DisposableRawImage extends RawImage {
-  const _DisposableRawImage(
-      {super.key, super.image, super.color, super.colorBlendMode});
-
-  @override
-  void didUnmountRenderObject(RenderImage renderObject) {
-    image?.dispose();
-    super.didUnmountRenderObject(renderObject);
   }
 }

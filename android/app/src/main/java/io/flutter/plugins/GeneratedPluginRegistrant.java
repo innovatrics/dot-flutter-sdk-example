@@ -25,5 +25,10 @@ public final class GeneratedPluginRegistrant {
     } catch (Exception e) {
       Log.e(TAG, "Error registering plugin dot_document_android, com.innovatrics.dot.flutter.document.DotDocumentPlugin", e);
     }
+    try {
+      flutterEngine.getPlugins().add(new com.innovatrics.dot.flutter.face.lite.DotFaceLitePlugin());
+    } catch (Exception e) {
+      Log.e(TAG, "Error registering plugin dot_face_lite_android, com.innovatrics.dot.flutter.face.lite.DotFaceLitePlugin", e);
+    }
   }
 }
