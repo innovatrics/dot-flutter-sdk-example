@@ -4,12 +4,7 @@ import 'package:flutter/material.dart';
 import '../page_routes.dart';
 import 'face_auto_capture_result_screen.dart';
 
-class FaceAutoCaptureScreen extends StatefulWidget {
-  @override
-  State createState() => _FaceAutoCaptureScreen();
-}
-
-class _FaceAutoCaptureScreen extends State<FaceAutoCaptureScreen> {
+class FaceAutoCaptureScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -18,18 +13,9 @@ class _FaceAutoCaptureScreen extends State<FaceAutoCaptureScreen> {
         ),
         body: FaceAutoCaptureWidget(
           configuration: FaceAutoCaptureConfiguration(),
-          onCreated: (controller) {
-            debugPrint("on created called, starting face auto capture");
-            controller.start();
-          },
-          onCandidateSelectionStarted: () =>
-              debugPrint("on candidate selection started called"),
-          onProcessed: (detection) => debugPrint("on processed called"),
-          onCaptured: (result) {
-            Navigator.of(context).pushReplacement(
-                createRoute(FaceAutoCaptureResultScreen(result)));
-          },
-          onStopped: () => debugPrint("on stopped called"),
+          onCreated: (controller) => controller.start(),
+          onCaptured: (result) => Navigator.of(context).pushReplacement(
+              createRoute(FaceAutoCaptureResultScreen(result))),
         ));
   }
 }

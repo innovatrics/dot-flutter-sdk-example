@@ -30,5 +30,15 @@ public final class GeneratedPluginRegistrant {
     } catch (Exception e) {
       Log.e(TAG, "Error registering plugin dot_face_lite_android, com.innovatrics.dot.flutter.face.lite.DotFaceLitePlugin", e);
     }
+    try {
+      flutterEngine.getPlugins().add(new com.innovatrics.dot.flutter.nfc.DotNfcPlugin());
+    } catch (Exception e) {
+      Log.e(TAG, "Error registering plugin dot_nfc_android, com.innovatrics.dot.flutter.nfc.DotNfcPlugin", e);
+    }
+    try {
+      flutterEngine.getPlugins().add(new io.flutter.plugins.pathprovider.PathProviderPlugin());
+    } catch (Exception e) {
+      Log.e(TAG, "Error registering plugin path_provider_android, io.flutter.plugins.pathprovider.PathProviderPlugin", e);
+    }
   }
 }

@@ -4,12 +4,7 @@ import 'package:flutter/material.dart';
 import '../page_routes.dart';
 import 'document_auto_capture_result_screen.dart';
 
-class DocumentAutoCaptureScreen extends StatefulWidget {
-  @override
-  State createState() => _DocumentAutoCaptureScreen();
-}
-
-class _DocumentAutoCaptureScreen extends State<DocumentAutoCaptureScreen> {
+class DocumentAutoCaptureScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -18,18 +13,9 @@ class _DocumentAutoCaptureScreen extends State<DocumentAutoCaptureScreen> {
         ),
         body: DocumentAutoCaptureWidget(
           configuration: DocumentAutoCaptureConfiguration(),
-          onCreated: (controller) {
-            debugPrint("on created called, starting document auto capture");
-            controller.start();
-          },
-          onCandidateSelectionStarted: () =>
-              debugPrint("on candidate selection started called"),
-          onProcessed: (detection) => debugPrint("on processed called"),
-          onCaptured: (result) {
-            Navigator.of(context).pushReplacement(
-                createRoute(DocumentAutoCaptureResultScreen(result)));
-          },
-          onStopped: () => debugPrint("on stopped called"),
+          onCreated: (controller) => controller.start(),
+          onCaptured: (result) => Navigator.of(context).pushReplacement(
+              createRoute(DocumentAutoCaptureResultScreen(result))),
         ));
   }
 }

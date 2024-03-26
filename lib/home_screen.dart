@@ -2,12 +2,15 @@ import 'dart:typed_data';
 
 import 'package:dot_document/dot_document.dart';
 import 'package:dot_face_lite/dot_face_lite.dart';
+import 'package:dot_nfc/dot_nfc.dart';
 import 'package:flutter/material.dart';
 
 import 'document_auto_capture/document_auto_capture_screen.dart';
 import 'face_auto_capture/face_auto_capture_screen.dart';
 import 'magnifeye_liveness/magnifeye_liveness_screen.dart';
+import 'nfc_reading/nfc_key_capture_screen.dart';
 import 'page_routes.dart';
+import 'progress_widget.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -36,7 +39,11 @@ class _HomeScreenState extends State<HomeScreen> {
         await DefaultAssetBundle.of(context).load('assets/dot_license.lic');
     await DotSdk.instance.initialize(DotSdkConfiguration(
         licenseBytes: licenseByteData.buffer.asUint8List(),
-        libraries: [DotDocumentLibrary(), DotFaceLiteLibrary()]));
+        libraries: [
+          DotDocumentLibrary(),
+          DotFaceLiteLibrary(),
+          DotNfcLibrary(),
+        ]));
   }
 
   @override
@@ -55,7 +62,7 @@ class _HomeScreenState extends State<HomeScreen> {
               } else if (snapshot.connectionState == ConnectionState.done) {
                 return createComponentList(context);
               } else {
-                return createProgress();
+                return const ProgressWidget();
               }
             },
           ),
@@ -64,10 +71,6 @@ class _HomeScreenState extends State<HomeScreen> {
 
   Widget createLicenseError() {
     return Text('License file is not valid.');
-  }
-
-  Widget createProgress() {
-    return Center(child: CircularProgressIndicator());
   }
 
   Widget createComponentList(BuildContext context) {
@@ -80,6 +83,14 @@ class _HomeScreenState extends State<HomeScreen> {
             onPressed: () {
               Navigator.of(context).push(
                   createRouteWithoutAnimation(DocumentAutoCaptureScreen()));
+            }),
+        _createComponent(
+            title: 'NFC Reading',
+            subtitle:
+                'Combination of Document Auto Capture component with enabled MRZ recognition and NFC Travel Document Reader component.',
+            onPressed: () {
+              Navigator.of(context)
+                  .push(createRouteWithoutAnimation(NfcKeyCaptureScreen()));
             }),
         _createComponent(
             title: 'Face Auto Capture',

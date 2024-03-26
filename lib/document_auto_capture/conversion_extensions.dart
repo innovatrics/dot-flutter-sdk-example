@@ -1,16 +1,14 @@
 import 'package:dot_document/dot_document.dart';
+import 'package:dot_flutter_sdk_example/conversion_extensions.dart';
 
 extension DocumentAutoCaptureResultExt on DocumentAutoCaptureResult {
   Map<String, dynamic> toJson() {
     return {
       'bgraRawImage': {
-        'bytes': '${bgraRawImage.bytes.length} bytes',
-        'size': {
-          'width': bgraRawImage.size.width,
-          'height': bgraRawImage.size.height
-        }
+        'bytes': bgraRawImage.bytes.toJson(),
+        'size': bgraRawImage.size.toJson(),
       },
-      'content': '${content.length} bytes',
+      'content': content.toJson(),
       'documentDetectorResult': {
         'confidence': documentDetectorResult.confidence,
         'corners': documentDetectorResult.corners.toJson(),

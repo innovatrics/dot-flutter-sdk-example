@@ -1,27 +1,52 @@
 PODS:
-  - dot-camera (7.2.1)
-  - dot-capture (7.2.1)
-  - dot-core (7.2.1)
-  - dot-document (7.2.1):
-    - dot-camera (= 7.2.1)
-    - dot-capture (= 7.2.1)
-    - dot-core (= 7.2.1)
+  - dot-camera (7.4.2)
+  - dot-capture (7.4.2)
+  - dot-core (7.4.2)
+  - dot-document (7.4.2):
+    - dot-camera (= 7.4.2)
+    - dot-capture (= 7.4.2)
+    - dot-core (= 7.4.2)
     - dot-protobuf (= 1.5.0)
     - sam (= 2.35.2)
+  - dot-face-commons (7.4.2)
+  - dot-face-lite (7.4.2):
+    - dot-camera (= 7.4.2)
+    - dot-capture (= 7.4.2)
+    - dot-core (= 7.4.2)
+    - dot-face-commons (= 7.4.2)
+    - dot-protobuf (= 1.5.0)
+    - sam-face (= 1.35.2)
+  - dot-nfc (7.4.2):
+    - dot-core (= 7.4.2)
+    - dot-openssl (= 1.2.0)
+  - dot-openssl (1.2.0)
   - dot-protobuf (1.5.0)
-  - dot_core_ios (0.1.0):
-    - dot-core (= 7.2.1)
+  - dot_core_ios (0.3.0-snapshot):
+    - dot-core (= 7.4.2)
     - Flutter
-  - dot_document_ios (0.1.0):
-    - dot-document (= 7.2.1)
+  - dot_document_ios (0.3.0-snapshot):
+    - dot-document (= 7.4.2)
+    - Flutter
+  - dot_face_lite_ios (0.3.0-snapshot):
+    - dot-face-lite (= 7.4.2)
+    - Flutter
+  - dot_nfc_ios (0.3.0-snapshot):
+    - dot-nfc (= 7.4.2)
     - Flutter
   - Flutter (1.0.0)
+  - path_provider_foundation (0.0.1):
+    - Flutter
+    - FlutterMacOS
   - sam (2.35.2)
+  - sam-face (1.35.2)
 
 DEPENDENCIES:
   - dot_core_ios (from `.symlinks/plugins/dot_core_ios/ios`)
   - dot_document_ios (from `.symlinks/plugins/dot_document_ios/ios`)
+  - dot_face_lite_ios (from `.symlinks/plugins/dot_face_lite_ios/ios`)
+  - dot_nfc_ios (from `.symlinks/plugins/dot_nfc_ios/ios`)
   - Flutter (from `Flutter`)
+  - path_provider_foundation (from `.symlinks/plugins/path_provider_foundation/darwin`)
 
 SPEC REPOS:
   https://github.com/innovatrics/innovatrics-podspecs:
@@ -29,28 +54,47 @@ SPEC REPOS:
     - dot-capture
     - dot-core
     - dot-document
+    - dot-face-commons
+    - dot-face-lite
+    - dot-nfc
+    - dot-openssl
     - dot-protobuf
     - sam
+    - sam-face
 
 EXTERNAL SOURCES:
   dot_core_ios:
     :path: ".symlinks/plugins/dot_core_ios/ios"
   dot_document_ios:
     :path: ".symlinks/plugins/dot_document_ios/ios"
+  dot_face_lite_ios:
+    :path: ".symlinks/plugins/dot_face_lite_ios/ios"
+  dot_nfc_ios:
+    :path: ".symlinks/plugins/dot_nfc_ios/ios"
   Flutter:
     :path: Flutter
+  path_provider_foundation:
+    :path: ".symlinks/plugins/path_provider_foundation/darwin"
 
 SPEC CHECKSUMS:
-  dot-camera: 3407b4d85234e154d03f059c9ed2e783bca99d9e
-  dot-capture: 2733445fcf14e037b904d570147ccc894f136943
-  dot-core: 291bba77c30d523d26198563fe072e1b2a2a9a24
-  dot-document: b7f2566ea7a4acaffafbd08595f7fd38bfa6c292
+  dot-camera: c9cfd22931f8ae83af20bd0a6008415ada46fdfc
+  dot-capture: a22144b02d45982c57ffcde41bacd51402fa3d43
+  dot-core: ecdbc4e4b84439800cff6e602e08b1bfc078bf75
+  dot-document: 9e08e82620ba2a286509bbdbcb7b68490d1dfb65
+  dot-face-commons: db8f6eadab30205aa36001b676e259ae83e18055
+  dot-face-lite: 683566421a28f21c3c73eded18f3a7ba00cfb6b3
+  dot-nfc: 8fc720374ac9e3470fb368615261c7bfe1e82fd0
+  dot-openssl: 109445d107b1bb3a69f59525beb83ad9ff208af5
   dot-protobuf: 023e0a2cf32c6733768f86eedd2179c64abc6398
-  dot_core_ios: 39543e7a988525f0d15f15741f4d931d27a48318
-  dot_document_ios: c1bdd956df09b5fe2a5771773e893366a7626c7a
+  dot_core_ios: 6a10df430baa4de218f8014a5f8f37501a8b1abd
+  dot_document_ios: d4f75cd2a1756939ed6a43d1860843fd920c0b80
+  dot_face_lite_ios: 91ac976da38f20645c805369869cd120c6dd7289
+  dot_nfc_ios: 8422f56ac3f85547a38b11c135c002db2aa434b7
   Flutter: f04841e97a9d0b0a8025694d0796dd46242b2854
+  path_provider_foundation: 3784922295ac71e43754bd15e0653ccfd36a147c
   sam: 5c7e5f0787c3418716ca6e1788973b8b5949311f
+  sam-face: bc0a59919eacffe29a34313dd74d5464a0a6a62f
 
-PODFILE CHECKSUM: 162ac26ca64d5db1d19d40ad454d8666b3b40138
+PODFILE CHECKSUM: 4e43d5ee82f157d93bc9b4d1cf31b44d2f8c9727
 
-COCOAPODS: 1.12.1
+COCOAPODS: 1.15.2

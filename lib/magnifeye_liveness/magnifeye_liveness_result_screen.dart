@@ -4,6 +4,7 @@ import 'package:dot_face_lite/dot_face_lite.dart';
 import 'package:flutter/material.dart';
 
 import '../disposable_raw_image.dart';
+import '../json_encoder_factory.dart';
 import '../magnifeye_liveness/conversion_extensions.dart';
 
 class MagnifEyeLivenessResultScreen extends StatelessWidget {
@@ -17,8 +18,8 @@ class MagnifEyeLivenessResultScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    JsonEncoder encoder = new JsonEncoder.withIndent('  ');
-    String jsonText = encoder.convert(_result.toJson());
+    JsonEncoder jsonEncoder = JsonEncoderFactory.create();
+    String jsonText = jsonEncoder.convert(_result.toJson());
 
     return Scaffold(
       appBar: AppBar(
