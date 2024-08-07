@@ -30,7 +30,7 @@ applicationId 'com.company.dot.flutter.example'
 
 ### Setup for both platforms
 
-1. To obtain a license file, please contact `support@innovatrics.com` and send them your unique identifier.
+1. To obtain a license file, please contact `sales@innovatrics.com` and send them your unique identifier.
 1. Add the license file to `assets/dot_license.lic`.
 
 ## Samples
@@ -42,7 +42,7 @@ applicationId 'com.company.dot.flutter.example'
 | **Face Auto Capture**     | Basic component sample.                                                                                               |
 | **MagnifEye Liveness**    | Basic component sample.                                                                                               |
 
-In case when the samples do not work because of the expired DOT license, please contact `support@innovatrics.com` in order to obtain a new license file.
+In case when the samples do not work because of the expired DOT license, please contact `sales@innovatrics.com` in order to obtain a new license file.
 
 ## Changelog
 

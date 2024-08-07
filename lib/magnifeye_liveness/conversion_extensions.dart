@@ -10,10 +10,10 @@ extension MagnifEyeLivenessResultExt on MagnifEyeLivenessResult {
         'bytes': bgraRawImage.bytes.toJson(),
         'size': bgraRawImage.size.toJson(),
       },
-      'faceDetectorResult': {
-        'confidence': faceDetectorResult.confidence,
-        'normalizedRectangle': faceDetectorResult.normalizedRectangle?.toJson(),
-        'imageParameters': faceDetectorResult.imageParameters?.toJson(),
+      'face': {
+        'confidence': face?.confidence,
+        'position': face?.position?.toJson(),
+        'imageParameters': face?.imageParameters?.toJson(),
       },
       'content': content.toJson(),
     };

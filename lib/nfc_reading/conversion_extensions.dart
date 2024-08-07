@@ -95,18 +95,117 @@ extension ChipAuthenticationStatusExt on ChipAuthenticationStatus {
   }
 }
 
-extension MachineReadableZoneInformationExt on MachineReadableZoneInformation {
+extension StringPositionExt on StringPosition {
   Map<String, dynamic> toJson() {
     return {
-      'documentCode': documentCode,
-      'issuingStateOrOrganization': issuingStateOrOrganization,
-      'nameOfHolder': nameOfHolder.toJson(),
-      'nationality': nationality,
-      'documentNumber': documentNumber,
-      'dateOfBirth': dateOfBirth,
-      'sex': sex,
-      'dateOfExpiry': dateOfExpiry,
-      'optionalData': optionalData,
+      'lineIndex': lineIndex,
+      'startIndex': startIndex,
+      'endIndex': endIndex,
+    };
+  }
+}
+
+extension CheckDigitExt on CheckDigit {
+  Map<String, dynamic> toJson() {
+    return {'value': value, 'isValid': isValid};
+  }
+}
+
+extension ElementExt on Element {
+  Map<String, dynamic> toJson() {
+    return {
+      'value': value,
+      'positions': positions.map((item) => item.toJson()).toList()
+    };
+  }
+}
+
+extension DateExt on Date {
+  Map<String, dynamic> toJson() {
+    return {'year': year, 'month': month, 'day': day};
+  }
+}
+
+extension DateElementWithCheckDigitExt on DateElementWithCheckDigit {
+  Map<String, dynamic> toJson() {
+    return {'date': date.toJson()};
+  }
+}
+
+extension Td1MachineReadableZoneExt on Td1MachineReadableZone {
+  Map<String, dynamic> toJson() {
+    return {
+      'documentCode': documentCode.toJson(),
+      'issuingStateOrOrganization': issuingStateOrOrganization.toJson(),
+      'documentNumber': documentNumber.toJson(),
+      'dateOfBirth': dateOfBirth.toJson(),
+      'sex': sex.toJson(),
+      'dateOfExpiry': dateOfExpiry.toJson(),
+      'nationality': nationality.toJson(),
+      'name': name.toJson(),
+      'optionalData': optionalData.map((item) => item.toJson()).toList(),
+      'compositeCheckDigit': compositeCheckDigit.toJson(),
+    };
+  }
+}
+
+extension Td2MachineReadableZoneExt on Td2MachineReadableZone {
+  Map<String, dynamic> toJson() {
+    return {
+      'documentCode': documentCode.toJson(),
+      'issuingStateOrOrganization': issuingStateOrOrganization.toJson(),
+      'documentNumber': documentNumber.toJson(),
+      'dateOfBirth': dateOfBirth.toJson(),
+      'sex': sex.toJson(),
+      'dateOfExpiry': dateOfExpiry.toJson(),
+      'nationality': nationality.toJson(),
+      'name': name.toJson(),
+      'optionalData': optionalData?.toJson(),
+      'compositeCheckDigit': compositeCheckDigit.toJson(),
+    };
+  }
+}
+
+extension Td3MachineReadableZoneExt on Td3MachineReadableZone {
+  Map<String, dynamic> toJson() {
+    return {
+      'documentCode': documentCode.toJson(),
+      'issuingStateOrOrganization': issuingStateOrOrganization.toJson(),
+      'passportNumber': passportNumber.toJson(),
+      'dateOfBirth': dateOfBirth.toJson(),
+      'sex': sex.toJson(),
+      'dateOfExpiry': dateOfExpiry.toJson(),
+      'nationality': nationality.toJson(),
+      'name': name.toJson(),
+      'personalNumberOrOtherOptionalData':
+          personalNumberOrOtherOptionalData.toJson(),
+      'compositeCheckDigit': compositeCheckDigit.toJson(),
+    };
+  }
+}
+
+extension MachineReadableZoneExt on MachineReadableZone {
+  Map<String, dynamic> toJson() {
+    return {
+      'lines': lines,
+      'td1': td1?.toJson(),
+      'td2': td2?.toJson(),
+      'td3': td3?.toJson()
+    };
+  }
+}
+
+extension MachineReadableZoneInformationExt on MachineReadableZoneInformation {
+  Map<String, dynamic> toJson() {
+    return {'machineReadableZone': machineReadableZone.toJson()};
+  }
+}
+
+extension NameElementExt on NameElement {
+  Map<String, dynamic> toJson() {
+    return {
+      'primaryIdentifier': primaryIdentifier?.toJson(),
+      'secondaryIdentifier': secondaryIdentifier?.toJson(),
     };
   }
 }

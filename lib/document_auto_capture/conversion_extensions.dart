@@ -9,12 +9,12 @@ extension DocumentAutoCaptureResultExt on DocumentAutoCaptureResult {
         'size': bgraRawImage.size.toJson(),
       },
       'content': content.toJson(),
-      'documentDetectorResult': {
-        'confidence': documentDetectorResult.confidence,
-        'corners': documentDetectorResult.corners.toJson(),
-        'widthToHeightRatio': documentDetectorResult.widthToHeightRatio
-      },
-      'imageParameters': imageParameters.toJson()
+      'document': {
+        'confidence': document?.confidence,
+        'position': document?.position?.toJson(),
+        'widthToHeightRatio': document?.widthToHeightRatio,
+        'imageParameters': document?.imageParameters?.toJson()
+      }
     };
   }
 }
@@ -29,7 +29,7 @@ extension ImageParametersExt on ImageParameters {
   }
 }
 
-extension CornersExt on Corners {
+extension DetectionPositionExt on DetectionPosition {
   Map<String, dynamic> toJson() {
     return {
       'bottomLeft': bottomLeft.toJson(),
@@ -37,11 +37,5 @@ extension CornersExt on Corners {
       'topLeft': topLeft.toJson(),
       'topRight': topRight.toJson()
     };
-  }
-}
-
-extension PointDoubleExt on PointDouble {
-  Map<String, dynamic> toJson() {
-    return {'x': x, 'y': y};
   }
 }
