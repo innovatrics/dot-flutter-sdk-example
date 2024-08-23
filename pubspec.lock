@@ -42,149 +42,131 @@ packages:
     source: hosted
     version: "1.18.0"
   dot_camera:
-    dependency: transitive
+    dependency: "direct overridden"
     description:
-      name: dot_camera
-      sha256: "4a66deb4cb767ce8fb9263c6bf3d2f4d37416ca75f02bf872010e134ad477974"
-      url: "https://pub.dev"
-    source: hosted
-    version: "0.4.0"
+      path: "../dot-flutter-sdk/dot_camera"
+      relative: true
+    source: path
+    version: "0.6.0-snapshot"
   dot_core:
-    dependency: transitive
+    dependency: "direct overridden"
     description:
-      name: dot_core
-      sha256: "17e64536cace9c6c56c8431476b6a0194090921307d78a96e48809aab4448336"
-      url: "https://pub.dev"
-    source: hosted
-    version: "0.4.0"
+      path: "../dot-flutter-sdk/dot_core/dot_core"
+      relative: true
+    source: path
+    version: "0.6.0-snapshot"
   dot_core_android:
-    dependency: transitive
+    dependency: "direct overridden"
     description:
-      name: dot_core_android
-      sha256: "5732ad9fb31d18d9e79aceebf83e5f99356fcc840fd73ae1d950e93fc97fa2bc"
-      url: "https://pub.dev"
-    source: hosted
-    version: "0.4.0"
+      path: "../dot-flutter-sdk/dot_core/dot_core_android"
+      relative: true
+    source: path
+    version: "0.6.0-snapshot"
   dot_core_ios:
-    dependency: transitive
+    dependency: "direct overridden"
     description:
-      name: dot_core_ios
-      sha256: "6248ab02ff8dfd757e5a89d37e845507051f18e06b02d864fc433d0763f2557d"
-      url: "https://pub.dev"
-    source: hosted
-    version: "0.4.0"
+      path: "../dot-flutter-sdk/dot_core/dot_core_ios"
+      relative: true
+    source: path
+    version: "0.6.0-snapshot"
   dot_core_platform_interface:
-    dependency: transitive
+    dependency: "direct overridden"
     description:
-      name: dot_core_platform_interface
-      sha256: "7d5259e159246a89a3749958a9a8e4548ae52878e928540cfc6a3498f81a1031"
-      url: "https://pub.dev"
-    source: hosted
-    version: "0.4.0"
+      path: "../dot-flutter-sdk/dot_core/dot_core_platform_interface"
+      relative: true
+    source: path
+    version: "0.6.0-snapshot"
   dot_document:
     dependency: "direct main"
     description:
-      name: dot_document
-      sha256: e384c0c44ad90c7d0cae64ac0ed55c4938c53f59a093694e3492c8bf34bff0aa
-      url: "https://pub.dev"
-    source: hosted
-    version: "0.4.0"
+      path: "../dot-flutter-sdk/dot_document/dot_document"
+      relative: true
+    source: path
+    version: "0.6.0-snapshot"
   dot_document_android:
-    dependency: transitive
+    dependency: "direct overridden"
     description:
-      name: dot_document_android
-      sha256: "20bce1018e1429e2c8ab87116f9aa7d5b86c432bbef3fb4192adf9fae438ee97"
-      url: "https://pub.dev"
-    source: hosted
-    version: "0.4.0"
+      path: "../dot-flutter-sdk/dot_document/dot_document_android"
+      relative: true
+    source: path
+    version: "0.6.0-snapshot"
   dot_document_ios:
-    dependency: transitive
+    dependency: "direct overridden"
     description:
-      name: dot_document_ios
-      sha256: d27a75efe914d05f4327962e17742ef04ea3defbfeaf259a70aec9d5168b319a
-      url: "https://pub.dev"
-    source: hosted
-    version: "0.4.0"
+      path: "../dot-flutter-sdk/dot_document/dot_document_ios"
+      relative: true
+    source: path
+    version: "0.6.0-snapshot"
   dot_document_platform_interface:
-    dependency: transitive
+    dependency: "direct overridden"
     description:
-      name: dot_document_platform_interface
-      sha256: "2d654cfc86f5f142cca10e2557d4c31adc3e07246bb8f175ebd58c48caeaa3be"
-      url: "https://pub.dev"
-    source: hosted
-    version: "0.4.0"
+      path: "../dot-flutter-sdk/dot_document/dot_document_platform_interface"
+      relative: true
+    source: path
+    version: "0.6.0-snapshot"
   dot_face_lite:
     dependency: "direct main"
     description:
-      name: dot_face_lite
-      sha256: f9707af90b2a24efbcedd5f635a8f3aaa8207089e00d7089a14e935543947771
-      url: "https://pub.dev"
-    source: hosted
-    version: "0.4.0"
+      path: "../dot-flutter-sdk/dot_face_lite/dot_face_lite"
+      relative: true
+    source: path
+    version: "0.6.0-snapshot"
   dot_face_lite_android:
-    dependency: transitive
+    dependency: "direct overridden"
     description:
-      name: dot_face_lite_android
-      sha256: e92ab4f6bb881cd234751bbe6062de4a1172e1d231eedce8e963e88383726d5d
-      url: "https://pub.dev"
-    source: hosted
-    version: "0.4.0"
+      path: "../dot-flutter-sdk/dot_face_lite/dot_face_lite_android"
+      relative: true
+    source: path
+    version: "0.6.0-snapshot"
   dot_face_lite_ios:
-    dependency: transitive
+    dependency: "direct overridden"
     description:
-      name: dot_face_lite_ios
-      sha256: b89debdefd6f73fec2ce2757d33598f6331b424e91d05a57f4b67801c60f8353
-      url: "https://pub.dev"
-    source: hosted
-    version: "0.4.0"
+      path: "../dot-flutter-sdk/dot_face_lite/dot_face_lite_ios"
+      relative: true
+    source: path
+    version: "0.6.0-snapshot"
   dot_face_lite_platform_interface:
-    dependency: transitive
+    dependency: "direct overridden"
     description:
-      name: dot_face_lite_platform_interface
-      sha256: "40a5e42606152bb50f1f5eae87eba8b90d5478a40ed783f0872921d278be44e2"
-      url: "https://pub.dev"
-    source: hosted
-    version: "0.4.0"
+      path: "../dot-flutter-sdk/dot_face_lite/dot_face_lite_platform_interface"
+      relative: true
+    source: path
+    version: "0.6.0-snapshot"
   dot_image:
-    dependency: transitive
+    dependency: "direct overridden"
     description:
-      name: dot_image
-      sha256: d63887179227fed19bdeae66c02eafc9146d2074e1ffe2124f3566d9a036a80d
-      url: "https://pub.dev"
-    source: hosted
-    version: "0.4.0"
+      path: "../dot-flutter-sdk/dot_image"
+      relative: true
+    source: path
+    version: "0.6.0-snapshot"
   dot_nfc:
     dependency: "direct main"
     description:
-      name: dot_nfc
-      sha256: b3b66ef3d72cdbf18c6e500728ce02cd5af2b5b176ddbe0b4be141be9eca7602
-      url: "https://pub.dev"
-    source: hosted
-    version: "0.4.0"
+      path: "../dot-flutter-sdk/dot_nfc/dot_nfc"
+      relative: true
+    source: path
+    version: "0.6.0-snapshot"
   dot_nfc_android:
-    dependency: transitive
+    dependency: "direct overridden"
     description:
-      name: dot_nfc_android
-      sha256: eebd28514bb8f5d11f62b227a60feae4f8adbd14ce373c376e6cc6c4d9de5e02
-      url: "https://pub.dev"
-    source: hosted
-    version: "0.4.0"
+      path: "../dot-flutter-sdk/dot_nfc/dot_nfc_android"
+      relative: true
+    source: path
+    version: "0.6.0-snapshot"
   dot_nfc_ios:
-    dependency: transitive
+    dependency: "direct overridden"
     description:
-      name: dot_nfc_ios
-      sha256: c1c42cf3b4a0045f1c2c87f482030981385057b7b053437f879f7d18d6cb18f9
-      url: "https://pub.dev"
-    source: hosted
-    version: "0.4.0"
+      path: "../dot-flutter-sdk/dot_nfc/dot_nfc_ios"
+      relative: true
+    source: path
+    version: "0.6.0-snapshot"
   dot_nfc_platform_interface:
-    dependency: transitive
+    dependency: "direct overridden"
     description:
-      name: dot_nfc_platform_interface
-      sha256: a847a9e25433fa77a18a7a48985f7fe8c9f69033adcef25f4c96b4b5918defee
-      url: "https://pub.dev"
-    source: hosted
-    version: "0.4.0"
+      path: "../dot-flutter-sdk/dot_nfc/dot_nfc_platform_interface"
+      relative: true
+    source: path
+    version: "0.6.0-snapshot"
   fake_async:
     dependency: transitive
     description:
