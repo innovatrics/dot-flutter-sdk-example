@@ -1,6 +1,5 @@
 import 'dart:io';
 
-import 'package:dot_document/dot_document.dart';
 import 'package:dot_nfc/dot_nfc.dart';
 import 'package:flutter/material.dart';
 
@@ -14,7 +13,10 @@ import 'resolve_authority_certificates_file_use_case.dart';
 class NfcReadingScreen extends StatefulWidget {
   final MachineReadableZone machineReadableZone;
 
-  NfcReadingScreen({required this.machineReadableZone});
+  const NfcReadingScreen({
+    super.key,
+    required this.machineReadableZone,
+  });
 
   @override
   State<NfcReadingScreen> createState() => _NfcReadingScreenState();
@@ -26,8 +28,9 @@ class _NfcReadingScreenState extends State<NfcReadingScreen> {
   @override
   void initState() {
     super.initState();
+    final assetBundle = DefaultAssetBundle.of(context);
     _authorityCertificatesFile =
-        ResolveAuthorityCertificatesFileUseCase().resolve(context);
+        ResolveAuthorityCertificatesFileUseCase().resolve(assetBundle);
   }
 
   @override
@@ -54,12 +57,15 @@ class _NfcReadingScreenState extends State<NfcReadingScreen> {
   }
 
   Widget _createNfcTravelDocumentReaderWidget(
-      String authorityCertificatesFilePath) {
+    String authorityCertificatesFilePath,
+  ) {
     return NfcTravelDocumentReaderWidget(
       configuration: _createNfcTravelDocumentReaderConfiguration(
-          authorityCertificatesFilePath),
+        authorityCertificatesFilePath,
+      ),
       onSucceeded: (travelDocument) => Navigator.of(context).pushReplacement(
-          createRoute(NfcReadingResultScreen(travelDocument: travelDocument))),
+        createRoute(NfcReadingResultScreen(travelDocument: travelDocument)),
+      ),
       onCancelled: () {
         if (mounted) {
           var navigator = Navigator.of(context);
@@ -69,13 +75,15 @@ class _NfcReadingScreenState extends State<NfcReadingScreen> {
         }
       },
       onFailed: (exception) => Navigator.of(context).pushReplacement(
-          createRoute(NfcReadingErrorScreen(message: exception.message))),
+        createRoute(NfcReadingErrorScreen(message: exception.message)),
+      ),
     );
   }
 
   NfcTravelDocumentReaderConfiguration
       _createNfcTravelDocumentReaderConfiguration(
-          String? authorityCertificatesFilePath) {
+    String? authorityCertificatesFilePath,
+  ) {
     return NfcTravelDocumentReaderConfiguration(
       nfcKey: NfcKeyFactory.create(widget.machineReadableZone),
       authorityCertificatesFilePath: authorityCertificatesFilePath,

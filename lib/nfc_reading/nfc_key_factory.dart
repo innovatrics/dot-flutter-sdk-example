@@ -1,4 +1,3 @@
-import 'package:dot_document/dot_document.dart';
 import 'package:dot_nfc/dot_nfc.dart';
 
 class NfcKeyFactory {

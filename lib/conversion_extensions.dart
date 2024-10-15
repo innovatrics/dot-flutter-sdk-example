@@ -1,10 +1,11 @@
 import 'dart:typed_data';
+import 'package:dot_document/dot_document.dart';
+import 'package:dot_face_lite/dot_face_lite.dart';
 import 'package:dot_nfc/dot_nfc.dart';
-import 'package:dot_core/dot_core.dart';
 
 extension Uint8ListExt on Uint8List {
   String toJson() {
-    return '${length} bytes';
+    return '$length bytes';
   }
 }
 
@@ -29,6 +30,9 @@ extension ImageSizeExt on ImageSize {
 
 extension PointDoubleExt on PointDouble {
   Map<String, dynamic> toJson() {
-    return {'x': x, 'y': y};
+    return {
+      'x': x,
+      'y': y,
+    };
   }
 }

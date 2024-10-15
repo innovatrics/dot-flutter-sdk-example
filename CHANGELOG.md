@@ -1,5 +1,12 @@
 # Changelog
 
+## 0.7.0 - 2024-10-15
+### Changed
+- Update DOT SDK to 0.6.0.
+
+### Fixed
+- Broken UI in landscape orientation.
+
 ## 0.6.0 - 2024-09-02
 ### Changed
 - Update DOT SDK to 0.5.1.

@@ -11,9 +11,9 @@ extension MagnifEyeLivenessResultExt on MagnifEyeLivenessResult {
         'size': bgraRawImage.size.toJson(),
       },
       'face': {
-        'confidence': face?.confidence,
-        'position': face?.position?.toJson(),
-        'imageParameters': face?.imageParameters?.toJson(),
+        'confidence': face.confidence,
+        'position': face.position.toJson(),
+        'imageParameters': face.imageParameters.toJson(),
       },
       'content': content.toJson(),
     };

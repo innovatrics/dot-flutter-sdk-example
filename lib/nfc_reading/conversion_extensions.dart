@@ -115,7 +115,7 @@ extension ElementExt on Element {
   Map<String, dynamic> toJson() {
     return {
       'value': value,
-      'positions': positions.map((item) => item.toJson()).toList()
+      'positions': positions.map((item) => item.toJson()).toList(),
     };
   }
 }
@@ -190,7 +190,7 @@ extension MachineReadableZoneExt on MachineReadableZone {
       'lines': lines,
       'td1': td1?.toJson(),
       'td2': td2?.toJson(),
-      'td3': td3?.toJson()
+      'td3': td3?.toJson(),
     };
   }
 }

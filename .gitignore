@@ -1,0 +1,12 @@
+assets/dot_license.lic
+.dart_tool
+.flutter-plugins
+.flutter-plugins-dependencies
+.gradle
+.idea
+**/build/
+**/gradlew
+**/gradlew.bat
+**/gradle-wrapper.jar
+**/local.properties
+*.iml

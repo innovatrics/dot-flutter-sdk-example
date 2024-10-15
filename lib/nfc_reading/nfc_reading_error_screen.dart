@@ -3,7 +3,10 @@ import 'package:flutter/material.dart';
 class NfcReadingErrorScreen extends StatelessWidget {
   final String message;
 
-  const NfcReadingErrorScreen({required this.message});
+  const NfcReadingErrorScreen({
+    super.key,
+    required this.message,
+  });
 
   @override
   Widget build(BuildContext context) {

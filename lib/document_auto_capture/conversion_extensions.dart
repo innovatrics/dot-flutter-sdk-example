@@ -11,10 +11,10 @@ extension DocumentAutoCaptureResultExt on DocumentAutoCaptureResult {
       'content': content.toJson(),
       'document': {
         'confidence': document?.confidence,
-        'position': document?.position?.toJson(),
+        'position': document?.position.toJson(),
         'widthToHeightRatio': document?.widthToHeightRatio,
-        'imageParameters': document?.imageParameters?.toJson()
-      }
+        'imageParameters': document?.imageParameters.toJson(),
+      },
     };
   }
 }
@@ -24,7 +24,7 @@ extension ImageParametersExt on ImageParameters {
     return {
       'brightness': brightness,
       'sharpness': sharpness,
-      'hotspotsScore': hotspotsScore
+      'hotspotsScore': hotspotsScore,
     };
   }
 }
@@ -35,7 +35,7 @@ extension DetectionPositionExt on DetectionPosition {
       'bottomLeft': bottomLeft.toJson(),
       'bottomRight': bottomRight.toJson(),
       'topLeft': topLeft.toJson(),
-      'topRight': topRight.toJson()
+      'topRight': topRight.toJson(),
     };
   }
 }

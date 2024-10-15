@@ -12,8 +12,8 @@ extension FaceAutoCaptureResultExt on FaceAutoCaptureResult {
       },
       'face': {
         'confidence': face?.confidence,
-        'position': face?.position?.toJson(),
-        'imageParameters': face?.imageParameters?.toJson(),
+        'position': face?.position.toJson(),
+        'imageParameters': face?.imageParameters.toJson(),
       },
       'content': content.toJson(),
     };

@@ -14,7 +14,7 @@ extension DetectionPositionExt on DetectionPosition {
   Map<String, dynamic> toJson() {
     return {
       'center': center.toJson(),
-      'sizeToImageShorterSideRatio': sizeToImageShorterSideRatio
+      'sizeToImageShorterSideRatio': sizeToImageShorterSideRatio,
     };
   }
 }

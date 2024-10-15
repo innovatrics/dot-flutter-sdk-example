@@ -10,6 +10,7 @@ class NfcReadingResultScreen extends StatelessWidget {
   final TravelDocument travelDocument;
 
   const NfcReadingResultScreen({
+    super.key,
     required this.travelDocument,
   });
 
@@ -24,7 +25,7 @@ class NfcReadingResultScreen extends StatelessWidget {
       body: SingleChildScrollView(
         child: Column(
           children: [
-            Container(
+            SizedBox(
               width: double.infinity,
               child: Text(jsonText, style: TextStyle(fontSize: 12)),
             ),
