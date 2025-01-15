@@ -12,9 +12,9 @@ flutter:
     - assets/
 
 dependencies:
-  dot_document: ^0.6.0
-  dot_face_lite: ^0.6.0
-  dot_nfc: ^0.6.0
+  dot_document: ^0.7.0
+  dot_face_lite: ^0.7.0
+  dot_nfc: ^0.7.0
   flutter:
     sdk: flutter
   path_provider: ^2.1.2

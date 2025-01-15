@@ -4,8 +4,8 @@ import 'package:flutter/material.dart';
 import '../page_routes.dart';
 import 'nfc_reading_screen.dart';
 
-class NfcKeyCaptureScreen extends StatelessWidget {
-  const NfcKeyCaptureScreen({
+class PasswordCaptureScreen extends StatelessWidget {
+  const PasswordCaptureScreen({
     super.key,
   });
 
@@ -13,7 +13,7 @@ class NfcKeyCaptureScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('NFC Key Capture'),
+        title: const Text('Password Capture'),
       ),
       body: DocumentAutoCaptureWidget(
         configuration: _createDocumentAutoCaptureConfiguration(),

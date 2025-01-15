@@ -8,7 +8,7 @@ import 'package:flutter/material.dart';
 import 'document_auto_capture/document_auto_capture_screen.dart';
 import 'face_auto_capture/face_auto_capture_screen.dart';
 import 'magnifeye_liveness/magnifeye_liveness_screen.dart';
-import 'nfc_reading/nfc_key_capture_screen.dart';
+import 'nfc_reading/password_capture_screen.dart';
 import 'page_routes.dart';
 import 'progress_widget.dart';
 
@@ -100,7 +100,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 'Combination of Document Auto Capture component with enabled MRZ recognition and NFC Travel Document Reader component.',
             onPressed: () {
               Navigator.of(context)
-                  .push(createRouteWithoutAnimation(NfcKeyCaptureScreen()));
+                  .push(createRouteWithoutAnimation(PasswordCaptureScreen()));
             },
           ),
           _createComponent(

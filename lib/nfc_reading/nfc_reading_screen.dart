@@ -5,9 +5,9 @@ import 'package:flutter/material.dart';
 
 import '../page_routes.dart';
 import '../progress_widget.dart';
-import 'nfc_key_factory.dart';
 import 'nfc_reading_error_screen.dart';
 import 'nfc_reading_result_screen.dart';
+import 'password_factory.dart';
 import 'resolve_authority_certificates_file_use_case.dart';
 
 class NfcReadingScreen extends StatefulWidget {
@@ -85,7 +85,7 @@ class _NfcReadingScreenState extends State<NfcReadingScreen> {
     String? authorityCertificatesFilePath,
   ) {
     return NfcTravelDocumentReaderConfiguration(
-      nfcKey: NfcKeyFactory.create(widget.machineReadableZone),
+      password: PasswordFactory.create(widget.machineReadableZone),
       authorityCertificatesFilePath: authorityCertificatesFilePath,
     );
   }
