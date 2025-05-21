@@ -63,8 +63,10 @@ class _NfcReadingScreenState extends State<NfcReadingScreen> {
       configuration: _createNfcTravelDocumentReaderConfiguration(
         authorityCertificatesFilePath,
       ),
-      onSucceeded: (travelDocument) => Navigator.of(context).pushReplacement(
-        createRoute(NfcReadingResultScreen(travelDocument: travelDocument)),
+      onSucceeded: (result) => Navigator.of(context).pushReplacement(
+        createRoute(
+          NfcReadingResultScreen(travelDocument: result.travelDocument),
+        ),
       ),
       onCancelled: () {
         if (mounted) {
@@ -87,6 +89,8 @@ class _NfcReadingScreenState extends State<NfcReadingScreen> {
     return NfcTravelDocumentReaderConfiguration(
       password: PasswordFactory.create(widget.machineReadableZone),
       authorityCertificatesFilePath: authorityCertificatesFilePath,
+      iosPollingOption: IosPollingOption.standard,
+      sessionToken: null,
     );
   }
 }

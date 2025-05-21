@@ -13,7 +13,7 @@ if (localPropertiesFile.exists()) {
 
 android {
     namespace 'com.innovatrics.dot.flutter.example'
-    compileSdk flutter.compileSdkVersion
+    compileSdk 35
 
     defaultConfig {
         applicationId 'com.innovatrics.dot.flutter.example'

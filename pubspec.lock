@@ -45,146 +45,146 @@ packages:
     dependency: transitive
     description:
       name: dot_camera
-      sha256: "686dcc4da5e1bd6fd2eebec3353eb8a0df9b9f7d3d79c9764ae959739c452fdf"
+      sha256: "61fbb22afcebb65d01b3637afc714e9406743ead9a812fcc2834fe3fa95f54ca"
       url: "https://pub.dev"
     source: hosted
-    version: "0.7.1"
+    version: "0.8.0"
   dot_core:
     dependency: transitive
     description:
       name: dot_core
-      sha256: "46c4110d1534b3d8ee5bc591440a201291064598021200a69340592fb0e62643"
+      sha256: fa96023d92a2de34413b5b74afc8257309130e676c3e6805136e0896b04c169d
       url: "https://pub.dev"
     source: hosted
-    version: "0.7.1"
+    version: "0.8.0"
   dot_core_android:
     dependency: transitive
     description:
       name: dot_core_android
-      sha256: "260dcc3cd073d629fbf5f88d85eda71ca99752d050f2a75a02eee9fb6c61af88"
+      sha256: f95bbcccaf1a400fcedec9354c3f407ce74e98b3e1e186e78c177b9f878dc289
       url: "https://pub.dev"
     source: hosted
-    version: "0.7.1"
+    version: "0.8.0"
   dot_core_ios:
     dependency: transitive
     description:
       name: dot_core_ios
-      sha256: "95cef47f45d14dc505ec1a812df9d2fb273401145f057ffa66bfd23008c80910"
+      sha256: bafdf4e8c9a925b5ab8e0425a01efdf7273def6b769566df3b85301041008941
       url: "https://pub.dev"
     source: hosted
-    version: "0.7.1"
+    version: "0.8.0"
   dot_core_platform_interface:
     dependency: transitive
     description:
       name: dot_core_platform_interface
-      sha256: "58fdb33551b934f25e9d3ec78a6831950985cec8f8132ca4829eaa3c5ed25c6d"
+      sha256: c5a611911ee37685760f12abe1f43f037a92a9d5d0faadec0aebb8c817125452
       url: "https://pub.dev"
     source: hosted
-    version: "0.7.1"
+    version: "0.8.0"
   dot_document:
     dependency: "direct main"
     description:
       name: dot_document
-      sha256: f8c99e3a7dafb5e757984e2530dce06b9e48cfc7ffdc93f50ea9795356cb6c83
+      sha256: "7a0261c8f5952f6fed5945ede9ba4d5eba9b1f30a8d5d6a0519a967a576a540f"
       url: "https://pub.dev"
     source: hosted
-    version: "0.7.1"
+    version: "0.8.0"
   dot_document_android:
     dependency: transitive
     description:
       name: dot_document_android
-      sha256: "4bc7f265550cee2fe2fa5c4c32dcf7981f30768efd485150155e3333cd05756a"
+      sha256: "08f7b518c75ecef8410117724761461b66ef7f4dcc1980b5717b68fbd5003e8f"
       url: "https://pub.dev"
     source: hosted
-    version: "0.7.1"
+    version: "0.8.0"
   dot_document_ios:
     dependency: transitive
     description:
       name: dot_document_ios
-      sha256: "5501005c65d5e5b752c60b9bce65ecad3f871545e073f20116ac735cd40cf172"
+      sha256: "1aef13aaa8fc8d96582c4c4e022628fc749db49da98675fddc9a22787cae3179"
       url: "https://pub.dev"
     source: hosted
-    version: "0.7.1"
+    version: "0.8.0"
   dot_document_platform_interface:
     dependency: transitive
     description:
       name: dot_document_platform_interface
-      sha256: e7b81022b90ac9002e15e3462a013cb49d44e8eaa66bc1e4a79839a92f57e56f
+      sha256: a8385e74b63c3d12dafe233f2b05fa046673de461abddbf4573a851a7d38771c
       url: "https://pub.dev"
     source: hosted
-    version: "0.7.1"
+    version: "0.8.0"
   dot_face_lite:
     dependency: "direct main"
     description:
       name: dot_face_lite
-      sha256: "2bcf7cc7751b1729b8bc47cfd72b1167fb1fbd9082deab0c3c59b2eff0171bd5"
+      sha256: "1cda9fc1abf90ad10d107eb0e9e6a9c0e2cd00c0635b8ed1785ed3b13f8dbd37"
       url: "https://pub.dev"
     source: hosted
-    version: "0.7.1"
+    version: "0.8.0"
   dot_face_lite_android:
     dependency: transitive
     description:
       name: dot_face_lite_android
-      sha256: "7dd065f329b886a881707b8dfccc415f1cc61b652c8112df26acadcef906930a"
+      sha256: e966904a1c14bb61edf0581e764cd84399e9e09271753e4bccfd171a28d54461
       url: "https://pub.dev"
     source: hosted
-    version: "0.7.1"
+    version: "0.8.0"
   dot_face_lite_ios:
     dependency: transitive
     description:
       name: dot_face_lite_ios
-      sha256: e6fa96b37b2efe0bdc6af032dd85d0fa237dacaf9893696677288af63710a6b5
+      sha256: f65f38019a297764bbdcc469416c515bd8f4bba26e700d6ceb5d34805f27a236
       url: "https://pub.dev"
     source: hosted
-    version: "0.7.1"
+    version: "0.8.0"
   dot_face_lite_platform_interface:
     dependency: transitive
     description:
       name: dot_face_lite_platform_interface
-      sha256: d8fa6f1255618314bdb68f183a0b63dea107418765fd7fd717775dd19251bd2d
+      sha256: "55ac4e87593c31206a4219c02f1d89ee69d278ac23c7ce5ec04024ea21710156"
       url: "https://pub.dev"
     source: hosted
-    version: "0.7.1"
+    version: "0.8.0"
   dot_image:
     dependency: transitive
     description:
       name: dot_image
-      sha256: f7fc69347e21172a5749b61a50546e604b4d215d1dd4c7b5df9bad1cc6878fa6
+      sha256: "934c20b5658802e8659ffab5de450a2bac5ff724ee5e4b717e46cf0ecee5f41e"
       url: "https://pub.dev"
     source: hosted
-    version: "0.7.1"
+    version: "0.8.0"
   dot_nfc:
     dependency: "direct main"
     description:
       name: dot_nfc
-      sha256: d60afeff4a6735a63af42d7c869952896334b93b8cb851362cd51262a7d508ff
+      sha256: bb697170302f7e80ce1d3c52f1b75f64be353ee1ae2d174dfc3c764e452f5e8e
       url: "https://pub.dev"
     source: hosted
-    version: "0.7.1"
+    version: "0.8.0"
   dot_nfc_android:
     dependency: transitive
     description:
       name: dot_nfc_android
-      sha256: "79d1a5ffd08e387f3c740335d1c22c5a725ac28da9ae7e7a6ffd67e3423d8adc"
+      sha256: "8082e6b68bff42a71eaa16766f31cbdf758daacb85b4cf685c75164bf4407957"
       url: "https://pub.dev"
     source: hosted
-    version: "0.7.1"
+    version: "0.8.0"
   dot_nfc_ios:
     dependency: transitive
     description:
       name: dot_nfc_ios
-      sha256: "0e96aa44db5ec366b302b391653a6e2763e6df722400d5748d343faeb78ac1ce"
+      sha256: ece7b709d23c39864c8e0b355a9646656a8ef75082f4714bad5447bc90a04080
       url: "https://pub.dev"
     source: hosted
-    version: "0.7.1"
+    version: "0.8.0"
   dot_nfc_platform_interface:
     dependency: transitive
     description:
       name: dot_nfc_platform_interface
-      sha256: "7909bfdcd098d86f3b8d3b96842bb694d8b733ed983bd2d6b4397da9908885ec"
+      sha256: "24b3e723d9284d02169ea44fba5b33d6c06364bfb963f5fa5d81e02e75335a6b"
       url: "https://pub.dev"
     source: hosted
-    version: "0.7.1"
+    version: "0.8.0"
   fake_async:
     dependency: transitive
     description:
@@ -295,10 +295,10 @@ packages:
     dependency: transitive
     description:
       name: path_provider_android
-      sha256: "4adf4fd5423ec60a29506c76581bc05854c55e3a0b72d35bb28d661c9686edf2"
+      sha256: d0d310befe2c8ab9e7f393288ccbb11b60c019c6b5afc21973eeee4dda2b35e9
       url: "https://pub.dev"
     source: hosted
-    version: "2.2.15"
+    version: "2.2.17"
   path_provider_foundation:
     dependency: transitive
     description:
@@ -426,4 +426,4 @@ packages:
     version: "1.1.0"
 sdks:
   dart: ">=3.6.0 <4.0.0"
-  flutter: ">=3.24.0"
+  flutter: ">=3.27.0"
