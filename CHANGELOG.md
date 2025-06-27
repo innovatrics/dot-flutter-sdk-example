@@ -1,5 +1,13 @@
 # Changelog
 
+## 0.11.0 - 2025-06-27
+### Added
+- Smile Liveness component sample.
+
+### Changed
+- Update DOT SDK to 0.9.1.
+- Face Auto Capture and MagnifEye Liveness samples now use Face library instead of Face Lite.
+
 ## 0.10.0 - 2025-05-21
 ### Changed
 - Update DOT SDK to 0.8.0.

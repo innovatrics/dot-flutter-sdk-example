@@ -1,7 +1,9 @@
 import 'dart:typed_data';
 
 import 'package:dot_document/dot_document.dart';
-import 'package:dot_face_lite/dot_face_lite.dart';
+import 'package:dot_face_core/dot_face_core.dart';
+import 'package:dot_face_detection_fast/dot_face_detection_fast.dart';
+import 'package:dot_face_expression_neutral/dot_face_expression_neutral.dart';
 import 'package:dot_nfc/dot_nfc.dart';
 import 'package:flutter/material.dart';
 
@@ -11,6 +13,7 @@ import 'magnifeye_liveness/magnifeye_liveness_screen.dart';
 import 'nfc_reading/password_capture_screen.dart';
 import 'page_routes.dart';
 import 'progress_widget.dart';
+import 'smile_liveness/smile_liveness_screen.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({
@@ -45,7 +48,14 @@ class _HomeScreenState extends State<HomeScreen> {
         licenseBytes: licenseByteData.buffer.asUint8List(),
         libraries: [
           DotDocumentLibrary(),
-          DotFaceLiteLibrary(),
+          DotFaceLibrary(
+            configuration: DotFaceLibraryConfiguration(
+              modules: [
+                DotFaceDetectionFastModule(),
+                DotFaceExpressionNeutralModule(),
+              ],
+            ),
+          ),
           DotNfcLibrary(),
         ],
       ),
@@ -109,6 +119,14 @@ class _HomeScreenState extends State<HomeScreen> {
             onPressed: () {
               Navigator.of(context)
                   .push(createRouteWithoutAnimation(FaceAutoCaptureScreen()));
+            },
+          ),
+          _createComponent(
+            title: 'Smile Liveness',
+            subtitle: 'Basic component sample.',
+            onPressed: () {
+              Navigator.of(context)
+                  .push(createRouteWithoutAnimation(SmileLivenessScreen()));
             },
           ),
           _createComponent(

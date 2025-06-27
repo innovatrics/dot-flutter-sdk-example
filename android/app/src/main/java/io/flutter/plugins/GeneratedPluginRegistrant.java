@@ -26,9 +26,19 @@ public final class GeneratedPluginRegistrant {
       Log.e(TAG, "Error registering plugin dot_document_android, com.innovatrics.dot.flutter.document.DotDocumentPlugin", e);
     }
     try {
-      flutterEngine.getPlugins().add(new com.innovatrics.dot.flutter.face.lite.DotFaceLitePlugin());
+      flutterEngine.getPlugins().add(new com.innovatrics.dot.flutter.face.core.DotFaceCorePlugin());
     } catch (Exception e) {
-      Log.e(TAG, "Error registering plugin dot_face_lite_android, com.innovatrics.dot.flutter.face.lite.DotFaceLitePlugin", e);
+      Log.e(TAG, "Error registering plugin dot_face_core_android, com.innovatrics.dot.flutter.face.core.DotFaceCorePlugin", e);
+    }
+    try {
+      flutterEngine.getPlugins().add(new com.innovatrics.dot.flutter.face.detection.fast.DotFaceDetectionFastPlugin());
+    } catch (Exception e) {
+      Log.e(TAG, "Error registering plugin dot_face_detection_fast_android, com.innovatrics.dot.flutter.face.detection.fast.DotFaceDetectionFastPlugin", e);
+    }
+    try {
+      flutterEngine.getPlugins().add(new com.innovatrics.dot.flutter.face.expressionneutral.DotFaceExpressionNeutralPlugin());
+    } catch (Exception e) {
+      Log.e(TAG, "Error registering plugin dot_face_expression_neutral_android, com.innovatrics.dot.flutter.face.expressionneutral.DotFaceExpressionNeutralPlugin", e);
     }
     try {
       flutterEngine.getPlugins().add(new com.innovatrics.dot.flutter.nfc.DotNfcPlugin());

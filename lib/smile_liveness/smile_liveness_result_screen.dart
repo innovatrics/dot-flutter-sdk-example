@@ -7,12 +7,12 @@ import '../disposable_raw_image.dart';
 import '../json_encoder_factory.dart';
 import 'conversion_extensions.dart';
 
-class FaceAutoCaptureResultScreen extends StatelessWidget {
-  final FaceAutoCaptureResult result;
+class SmileLivenessResultScreen extends StatelessWidget {
+  final SmileLivenessResult result;
 
   late final Future<RawImage> _image;
 
-  FaceAutoCaptureResultScreen({
+  SmileLivenessResultScreen({
     super.key,
     required this.result,
   }) {
@@ -26,7 +26,7 @@ class FaceAutoCaptureResultScreen extends StatelessWidget {
 
     return Scaffold(
       appBar: AppBar(
-        title: Text('Face Auto Capture Result'),
+        title: Text('Smile Liveness Result'),
       ),
       body: SingleChildScrollView(
         child: Column(
@@ -54,7 +54,7 @@ class FaceAutoCaptureResultScreen extends StatelessWidget {
     );
   }
 
-  Future<RawImage> getImageFromResult(FaceAutoCaptureResult result) async {
+  Future<RawImage> getImageFromResult(SmileLivenessResult result) async {
     final uiImage =
         await ImageFactory.createFromBgrRawImage(result.bgrRawImage);
     return DisposableRawImage(

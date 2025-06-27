@@ -1,4 +1,4 @@
-import 'package:dot_face_lite/dot_face_lite.dart';
+import 'package:dot_face_core/dot_face_core.dart';
 import 'package:flutter/material.dart';
 
 import '../page_routes.dart';
@@ -16,7 +16,35 @@ class FaceAutoCaptureScreen extends StatelessWidget {
         title: Text('Face Auto Capture'),
       ),
       body: FaceAutoCaptureWidget(
-        configuration: FaceAutoCaptureConfiguration(),
+        configuration: FaceAutoCaptureConfiguration(
+          query: FaceDetectionQuery(
+            faceQuality: FaceQualityQuery(
+              imageQuality: FaceImageQualityQuery(
+                evaluateSharpness: true,
+                evaluateBrightness: true,
+                evaluateContrast: true,
+                evaluateUniqueIntensityLevels: true,
+                evaluateShadow: true,
+                evaluateSpecularity: true,
+              ),
+              headPose: HeadPoseQuery(
+                evaluateRoll: true,
+                evaluateYaw: true,
+                evaluatePitch: true,
+              ),
+              wearables: WearablesQuery(
+                evaluateGlasses: true,
+              ),
+              expression: ExpressionQuery(
+                eyes: EyesExpressionQuery(
+                  evaluateRightEye: true,
+                  evaluateLeftEye: true,
+                ),
+                evaluateMouth: true,
+              ),
+            ),
+          ),
+        ),
         onCreated: (controller) => controller.start(),
         onCaptured: (result) => Navigator.of(context).pushReplacement(
           createRoute(FaceAutoCaptureResultScreen(result: result)),

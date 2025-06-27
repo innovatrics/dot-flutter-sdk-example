@@ -4,8 +4,8 @@ import 'package:dot_document/dot_document.dart';
 import 'package:flutter/material.dart';
 
 import '../disposable_raw_image.dart';
-import '../document_auto_capture/conversion_extensions.dart';
 import '../json_encoder_factory.dart';
+import 'conversion_extensions.dart';
 
 class DocumentAutoCaptureResultScreen extends StatelessWidget {
   final DocumentAutoCaptureResult result;
@@ -55,7 +55,8 @@ class DocumentAutoCaptureResultScreen extends StatelessWidget {
   }
 
   Future<RawImage> getImageFromResult(DocumentAutoCaptureResult result) async {
-    final uiImage = await ImageFactory.create(result.bgraRawImage);
+    final uiImage =
+        await ImageFactory.createFromBgraRawImage(result.bgraRawImage);
     return DisposableRawImage(
       image: uiImage,
       color: Colors.black,

@@ -40,6 +40,7 @@ applicationId 'com.company.dot.flutter.example'
 | **Document Auto Capture** | Basic component sample.                                                                                               |
 | **NFC Reading**           | Combination of Document Auto Capture component with enabled MRZ recognition and NFC Travel Document Reader component. |
 | **Face Auto Capture**     | Basic component sample.                                                                                               |
+| **Smile Liveness**        | Basic component sample.                                                                                               |
 | **MagnifEye Liveness**    | Basic component sample.                                                                                               |
 
 In case when the samples do not work because of the expired DOT license, please contact `sales@innovatrics.com` in order to obtain a new license file.

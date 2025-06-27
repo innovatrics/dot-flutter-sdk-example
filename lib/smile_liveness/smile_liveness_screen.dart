@@ -2,10 +2,10 @@ import 'package:dot_face_core/dot_face_core.dart';
 import 'package:flutter/material.dart';
 
 import '../page_routes.dart';
-import 'magnifeye_liveness_result_screen.dart';
+import 'smile_liveness_result_screen.dart';
 
-class MagnifEyeLivenessScreen extends StatelessWidget {
-  const MagnifEyeLivenessScreen({
+class SmileLivenessScreen extends StatelessWidget {
+  const SmileLivenessScreen({
     super.key,
   });
 
@@ -13,14 +13,14 @@ class MagnifEyeLivenessScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('MagnifEye Liveness'),
+        title: Text('Smile Liveness'),
       ),
-      body: MagnifEyeLivenessWidget(
-        configuration: MagnifEyeLivenessConfiguration(),
+      body: SmileLivenessWidget(
+        configuration: SmileLivenessConfiguration(),
         onCreated: (controller) => controller.start(),
         onFinished: (result) => Navigator.of(context).pushReplacement(
           createRoute(
-            MagnifEyeLivenessResultScreen(result: result),
+            SmileLivenessResultScreen(result: result),
           ),
         ),
       ),

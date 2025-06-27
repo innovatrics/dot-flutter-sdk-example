@@ -3,11 +3,11 @@ import 'package:dot_flutter_sdk_example/conversion_extensions.dart';
 
 import '../face/conversion_extensions.dart';
 
-extension FaceAutoCaptureResultExt on FaceAutoCaptureResult {
+extension SmileLivenessResultExt on SmileLivenessResult {
   Map<String, dynamic> toJson() {
     return {
       'bgrRawImage': bgrRawImage.toJson(),
-      'face': face?.toJson(),
+      'face': face.toJson(),
       'content': content.toJson(),
     };
   }
