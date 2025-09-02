@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.12.0 - 2025-09-02
+### Changed
+- Update DOT SDK to 0.9.2.
+- Minimum Android API level to 24.
+
 ## 0.11.0 - 2025-06-27
 ### Added
 - Smile Liveness component sample.
