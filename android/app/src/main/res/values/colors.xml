@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="dot_detection_layer">#ff4287f5</color>
+    <color name="dot_instruction_background">#ff57f542</color>
+    <color name="dot_instruction_candidate_selection_background">#fff0a000</color>
+    <color name="dot_instruction_candidate_selection_text">#fff00018</color>
+    <color name="dot_instruction_text">#ffe800f0</color>
+    <color name="dot_placeholder">#ff9e8fc7</color>
+    <color name="dot_placeholder_candidate_selection">#ff0096b0</color>
+    <color name="dot_placeholder_overlay">#ff00b075</color>
+</resources>
