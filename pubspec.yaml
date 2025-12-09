@@ -12,11 +12,11 @@ flutter:
     - assets/
 
 dependencies:
-  dot_document: ^0.10.2
-  dot_face_core: ^0.10.2
-  dot_face_detection_fast: ^0.10.2
-  dot_face_expression_neutral: ^0.10.2
-  dot_nfc: ^0.10.2
+  dot_document: ^0.10.3
+  dot_face_core: ^0.10.3
+  dot_face_detection_fast: ^0.10.3
+  dot_face_expression_neutral: ^0.10.3
+  dot_nfc: ^0.10.3
   flutter:
     sdk: flutter
   path_provider: ^2.1.2
