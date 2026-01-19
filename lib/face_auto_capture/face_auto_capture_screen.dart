@@ -17,36 +17,41 @@ class FaceAutoCaptureScreen extends StatelessWidget {
       ),
       body: FaceAutoCaptureWidget(
         configuration: FaceAutoCaptureConfiguration(
-          query: FaceDetectionQuery(
-            faceQuality: FaceQualityQuery(
-              imageQuality: FaceImageQualityQuery(
-                evaluateSharpness: true,
-                evaluateBrightness: true,
-                evaluateContrast: true,
-                evaluateUniqueIntensityLevels: true,
-                evaluateShadow: true,
-                evaluateSpecularity: true,
-              ),
-              headPose: HeadPoseQuery(
-                evaluateRoll: true,
-                evaluateYaw: true,
-                evaluatePitch: true,
-              ),
-              wearables: WearablesQuery(
-                evaluateGlasses: true,
-              ),
-              expression: ExpressionQuery(
-                eyes: EyesExpressionQuery(
-                  evaluateRightEye: true,
-                  evaluateLeftEye: true,
+          base: BaseFaceAutoCaptureConfiguration(
+            faceLibraryComponent: FaceLibraryComponentConfiguration(
+              faceSizeRatioInterval: IntervalDouble(min: 0.1, max: 0.3),
+              query: FaceDetectionQuery(
+                faceQuality: FaceQualityQuery(
+                  imageQuality: FaceImageQualityQuery(
+                    evaluateSharpness: true,
+                    evaluateBrightness: true,
+                    evaluateContrast: true,
+                    evaluateUniqueIntensityLevels: true,
+                    evaluateShadow: true,
+                    evaluateSpecularity: true,
+                  ),
+                  headPose: HeadPoseQuery(
+                    evaluateRoll: true,
+                    evaluateYaw: true,
+                    evaluatePitch: true,
+                  ),
+                  wearables: WearablesQuery(
+                    evaluateGlasses: true,
+                  ),
+                  expression: ExpressionQuery(
+                    eyes: EyesExpressionQuery(
+                      evaluateRightEye: true,
+                      evaluateLeftEye: true,
+                    ),
+                    evaluateMouth: true,
+                  ),
                 ),
-                evaluateMouth: true,
               ),
             ),
           ),
         ),
         onCreated: (controller) => controller.start(),
-        onCaptured: (result) => Navigator.of(context).pushReplacement(
+        onFinished: (result) => Navigator.of(context).pushReplacement(
           createRoute(FaceAutoCaptureResultScreen(result: result)),
         ),
       ),

@@ -4,7 +4,7 @@ import 'package:dot_flutter_sdk_example/conversion_extensions.dart';
 extension DocumentAutoCaptureResultExt on DocumentAutoCaptureResult {
   Map<String, dynamic> toJson() {
     return {
-      'bgraRawImage': bgraRawImage.toJson(),
+      'image': image.toJson(),
       'document': document?.toJson(),
       'content': content.toJson(),
     };
@@ -17,7 +17,7 @@ extension DocumentDetectorDocumentExt on DocumentDetectorDocument {
       'confidence': confidence,
       'position': position.toJson(),
       'widthToHeightRatio': widthToHeightRatio,
-      'imageParameters': imageParameters.toJson(),
+      'quality': quality.toJson(),
     };
   }
 }
@@ -33,7 +33,15 @@ extension DetectionPositionExt on DetectionPosition {
   }
 }
 
-extension ImageParametersExt on ImageParameters {
+extension DocumentQualityExt on DocumentQuality {
+  Map<String, dynamic> toJson() {
+    return {
+      'imageQuality': imageQuality.toJson(),
+    };
+  }
+}
+
+extension DocumentImageQualityExt on DocumentImageQuality {
   Map<String, dynamic> toJson() {
     return {
       'brightness': brightness,

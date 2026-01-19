@@ -18,7 +18,7 @@ class PasswordCaptureScreen extends StatelessWidget {
       body: DocumentAutoCaptureWidget(
         configuration: _createDocumentAutoCaptureConfiguration(),
         onCreated: (controller) => controller.start(),
-        onCaptured: (result) => Navigator.of(context).pushReplacement(
+        onFinished: (result) => Navigator.of(context).pushReplacement(
           createRoute(
             NfcReadingScreen(
               machineReadableZone: result.machineReadableZone!,
@@ -31,7 +31,9 @@ class PasswordCaptureScreen extends StatelessWidget {
 
   DocumentAutoCaptureConfiguration _createDocumentAutoCaptureConfiguration() {
     return DocumentAutoCaptureConfiguration(
-      mrzValidation: MrzValidation.validateAlways,
+      base: BaseDocumentAutoCaptureConfiguration(
+        mrzValidation: MrzValidation.requirePresenceAndValidity,
+      ),
     );
   }
 }

@@ -6,7 +6,7 @@ import '../face/conversion_extensions.dart';
 extension SmileLivenessResultExt on SmileLivenessResult {
   Map<String, dynamic> toJson() {
     return {
-      'bgrRawImage': bgrRawImage.toJson(),
+      'image': image.toJson(),
       'face': face.toJson(),
       'content': content.toJson(),
     };

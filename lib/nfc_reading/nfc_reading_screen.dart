@@ -90,7 +90,6 @@ class _NfcReadingScreenState extends State<NfcReadingScreen> {
       password: PasswordFactory.create(widget.machineReadableZone),
       authorityCertificatesFilePath: authorityCertificatesFilePath,
       iosPollingOption: IosPollingOption.standard,
-      sessionToken: null,
     );
   }
 }

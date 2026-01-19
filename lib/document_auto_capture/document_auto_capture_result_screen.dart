@@ -56,7 +56,7 @@ class DocumentAutoCaptureResultScreen extends StatelessWidget {
 
   Future<RawImage> getImageFromResult(DocumentAutoCaptureResult result) async {
     final uiImage =
-        await ImageFactory.createFromBgraRawImage(result.bgraRawImage);
+        await ImageFactory.create(result.image);
     return DisposableRawImage(
       image: uiImage,
       color: Colors.black,

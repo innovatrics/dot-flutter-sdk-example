@@ -56,7 +56,7 @@ class FaceAutoCaptureResultScreen extends StatelessWidget {
 
   Future<RawImage> getImageFromResult(FaceAutoCaptureResult result) async {
     final uiImage =
-        await ImageFactory.createFromBgrRawImage(result.bgrRawImage);
+        await ImageFactory.create(result.image);
     return DisposableRawImage(
       image: uiImage,
       color: Colors.black,

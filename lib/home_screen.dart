@@ -2,8 +2,6 @@ import 'dart:typed_data';
 
 import 'package:dot_document/dot_document.dart';
 import 'package:dot_face_core/dot_face_core.dart';
-import 'package:dot_face_detection_fast/dot_face_detection_fast.dart';
-import 'package:dot_face_expression_neutral/dot_face_expression_neutral.dart';
 import 'package:dot_nfc/dot_nfc.dart';
 import 'package:flutter/material.dart';
 
@@ -46,18 +44,16 @@ class _HomeScreenState extends State<HomeScreen> {
     await DotSdk.instance.initialize(
       DotSdkConfiguration(
         licenseBytes: licenseByteData.buffer.asUint8List(),
-        libraries: [
-          DotDocumentLibrary(),
-          DotFaceLibrary(
-            configuration: DotFaceLibraryConfiguration(
-              modules: [
-                DotFaceDetectionFastModule(),
-                DotFaceExpressionNeutralModule(),
-              ],
+        libraries: Libraries(
+          document: DotDocumentLibraryConfiguration(),
+          face: DotFaceLibraryConfiguration(
+            modules: FaceModules(
+              detection: DotFaceDetectionFastModuleConfiguration(),
+              expressionNeutral: DotFaceExpressionNeutralModuleConfiguration(),
             ),
           ),
-          DotNfcLibrary(),
-        ],
+          nfc: DotNfcLibraryConfiguration(),
+        ),
       ),
     );
   }

@@ -55,8 +55,7 @@ class MagnifEyeLivenessResultScreen extends StatelessWidget {
   }
 
   Future<RawImage> getImageFromResult(MagnifEyeLivenessResult result) async {
-    final uiImage =
-        await ImageFactory.createFromBgrRawImage(result.bgrRawImage);
+    final uiImage = await ImageFactory.create(result.image);
     return DisposableRawImage(
       image: uiImage,
       color: Colors.black,

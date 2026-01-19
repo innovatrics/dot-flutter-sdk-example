@@ -1,25 +1,7 @@
 import 'dart:typed_data';
+
 import 'package:dot_document/dot_document.dart';
 import 'package:dot_face_core/dot_face_core.dart';
-import 'package:dot_nfc/dot_nfc.dart';
-
-extension BgrRawImageExt on BgrRawImage {
-  Map<String, dynamic> toJson() {
-    return {
-      'bytes': bytes.toJson(),
-      'size': size.toJson(),
-    };
-  }
-}
-
-extension BgraRawImageExt on BgraRawImage {
-  Map<String, dynamic> toJson() {
-    return {
-      'bytes': bytes.toJson(),
-      'size': size.toJson(),
-    };
-  }
-}
 
 extension Uint8ListExt on Uint8List {
   String toJson() {

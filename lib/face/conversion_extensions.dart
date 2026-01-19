@@ -6,9 +6,9 @@ extension FaceDetectorFaceExt on FaceDetectorFace {
     return {
       'confidence': confidence,
       'position': position.toJson(),
-      'faceAspects': faceAspects.toJson(),
-      'faceQuality': faceQuality.toJson(),
-      'faceKeypoints': faceKeypoints.toJson(),
+      'aspects': aspects.toJson(),
+      'quality': quality.toJson(),
+      'keypoints': keypoints.toJson(),
     };
   }
 }
