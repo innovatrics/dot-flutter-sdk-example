@@ -16,7 +16,7 @@ class MagnifEyeLivenessScreen extends StatelessWidget {
         title: Text('MagnifEye Liveness'),
       ),
       body: MagnifEyeLivenessWidget(
-        configuration: MagnifEyeLivenessConfiguration(),
+        configuration: MagnifEyeLivenessWidgetConfiguration(),
         onCreated: (controller) => controller.start(),
         onFinished: (result) => Navigator.of(context).pushReplacement(
           createRoute(

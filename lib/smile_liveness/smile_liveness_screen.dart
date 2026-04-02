@@ -16,7 +16,7 @@ class SmileLivenessScreen extends StatelessWidget {
         title: Text('Smile Liveness'),
       ),
       body: SmileLivenessWidget(
-        configuration: SmileLivenessConfiguration(),
+        configuration: SmileLivenessWidgetConfiguration(),
         onCreated: (controller) => controller.start(),
         onFinished: (result) => Navigator.of(context).pushReplacement(
           createRoute(

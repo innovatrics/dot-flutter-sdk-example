@@ -16,8 +16,8 @@ class FaceAutoCaptureScreen extends StatelessWidget {
         title: Text('Face Auto Capture'),
       ),
       body: FaceAutoCaptureWidget(
-        configuration: FaceAutoCaptureConfiguration(
-          base: BaseFaceAutoCaptureConfiguration(
+        configuration: FaceAutoCaptureWidgetConfiguration(
+          base: BaseFaceAutoCaptureWidgetConfiguration(
             faceLibraryComponent: FaceLibraryComponentConfiguration(
               faceSizeRatioInterval: IntervalDouble(min: 0.1, max: 0.3),
               query: FaceDetectionQuery(

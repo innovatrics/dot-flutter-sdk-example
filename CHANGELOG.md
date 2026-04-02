@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.17.0 - 2026-04-02
+### Changed
+- Update DOT SDK to 0.12.0
+
 ## 0.16.0 - 2026-01-19
 ### Changed
 - Update DOT SDK to 0.11.0

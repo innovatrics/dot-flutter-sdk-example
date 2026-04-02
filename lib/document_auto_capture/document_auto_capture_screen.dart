@@ -16,7 +16,7 @@ class DocumentAutoCaptureScreen extends StatelessWidget {
         title: Text('Document Auto Capture'),
       ),
       body: DocumentAutoCaptureWidget(
-        configuration: DocumentAutoCaptureConfiguration(),
+        configuration: DocumentAutoCaptureWidgetConfiguration(),
         onCreated: (controller) => controller.start(),
         onFinished: (result) => Navigator.of(context).pushReplacement(
           createRoute(DocumentAutoCaptureResultScreen(result: result)),

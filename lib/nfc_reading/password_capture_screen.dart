@@ -29,9 +29,9 @@ class PasswordCaptureScreen extends StatelessWidget {
     );
   }
 
-  DocumentAutoCaptureConfiguration _createDocumentAutoCaptureConfiguration() {
-    return DocumentAutoCaptureConfiguration(
-      base: BaseDocumentAutoCaptureConfiguration(
+  DocumentAutoCaptureWidgetConfiguration _createDocumentAutoCaptureConfiguration() {
+    return DocumentAutoCaptureWidgetConfiguration(
+      base: BaseDocumentAutoCaptureWidgetConfiguration(
         mrzValidation: MrzValidation.requirePresenceAndValidity,
       ),
     );

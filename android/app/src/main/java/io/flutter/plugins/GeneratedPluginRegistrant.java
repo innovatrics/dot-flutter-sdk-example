@@ -26,6 +26,11 @@ public final class GeneratedPluginRegistrant {
       Log.e(TAG, "Error registering plugin dot_document_android, com.innovatrics.dot.flutter.document.DotDocumentPlugin", e);
     }
     try {
+      flutterEngine.getPlugins().add(new com.innovatrics.dot.flutter.document.barcode.DotDocumentBarcodePlugin());
+    } catch (Exception e) {
+      Log.e(TAG, "Error registering plugin dot_document_barcode_android, com.innovatrics.dot.flutter.document.barcode.DotDocumentBarcodePlugin", e);
+    }
+    try {
       flutterEngine.getPlugins().add(new com.innovatrics.dot.flutter.face.core.DotFaceCorePlugin());
     } catch (Exception e) {
       Log.e(TAG, "Error registering plugin dot_face_core_android, com.innovatrics.dot.flutter.face.core.DotFaceCorePlugin", e);

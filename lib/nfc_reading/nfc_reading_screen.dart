@@ -82,11 +82,11 @@ class _NfcReadingScreenState extends State<NfcReadingScreen> {
     );
   }
 
-  NfcTravelDocumentReaderConfiguration
+  NfcTravelDocumentReaderWidgetConfiguration
       _createNfcTravelDocumentReaderConfiguration(
     String? authorityCertificatesFilePath,
   ) {
-    return NfcTravelDocumentReaderConfiguration(
+    return NfcTravelDocumentReaderWidgetConfiguration(
       password: PasswordFactory.create(widget.machineReadableZone),
       authorityCertificatesFilePath: authorityCertificatesFilePath,
       iosPollingOption: IosPollingOption.standard,
