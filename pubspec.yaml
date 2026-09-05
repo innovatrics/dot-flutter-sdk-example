@@ -1,23 +1,27 @@
 name: dot_flutter_sdk_example
-description: Demonstrates how to use the DOT Flutter SDK.
+description: Demonstrates how to use the IDV Flutter SDK.
 publish_to: none
 
 environment:
-  sdk: ">=3.1.0 <4.0.0"
-  flutter: ">=3.10.0"
+  sdk: ">=3.11.0 <4.0.0"
+  flutter: ">=3.47.0"
 
 flutter:
+  # None of the dot_*_ios plugins ship a Package.swift yet (PLACP-424), so
+  # keep 3.47's default-on SPM integration out of the Xcode project.
+  config:
+    enable-swift-package-manager: false
   uses-material-design: true
   assets:
     - assets/
 
 dependencies:
-  dot_document: ^0.12.0
-  dot_document_barcode: ^0.12.0
-  dot_face_core: ^0.12.0
-  dot_face_detection_fast: ^0.12.0
-  dot_face_expression_neutral: ^0.12.0
-  dot_nfc: ^0.12.0
+  dot_document: ^0.13.0
+  dot_document_barcode: ^0.13.0
+  dot_face_core: ^0.13.0
+  dot_face_detection_fast: ^0.13.0
+  dot_face_expression_neutral: ^0.13.0
+  dot_nfc: ^0.13.0
   flutter:
     sdk: flutter
   path_provider: ^2.1.2

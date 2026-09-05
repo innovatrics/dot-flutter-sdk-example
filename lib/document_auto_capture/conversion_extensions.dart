@@ -35,9 +35,7 @@ extension DetectionPositionExt on DetectionPosition {
 
 extension DocumentQualityExt on DocumentQuality {
   Map<String, dynamic> toJson() {
-    return {
-      'imageQuality': imageQuality.toJson(),
-    };
+    return {'imageQuality': imageQuality.toJson()};
   }
 }
 

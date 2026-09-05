@@ -12,10 +12,7 @@ class FaceAutoCaptureResultScreen extends StatelessWidget {
 
   late final Future<RawImage> _image;
 
-  FaceAutoCaptureResultScreen({
-    super.key,
-    required this.result,
-  }) {
+  FaceAutoCaptureResultScreen({super.key, required this.result}) {
     _image = getImageFromResult(result);
   }
 
@@ -25,9 +22,7 @@ class FaceAutoCaptureResultScreen extends StatelessWidget {
     String jsonText = jsonEncoder.convert(result.toJson());
 
     return Scaffold(
-      appBar: AppBar(
-        title: Text('Face Auto Capture Result'),
-      ),
+      appBar: AppBar(title: Text('Face Auto Capture Result')),
       body: SingleChildScrollView(
         child: Column(
           children: [
@@ -55,8 +50,7 @@ class FaceAutoCaptureResultScreen extends StatelessWidget {
   }
 
   Future<RawImage> getImageFromResult(FaceAutoCaptureResult result) async {
-    final uiImage =
-        await ImageFactory.create(result.image);
+    final uiImage = await ImageFactory.create(result.image);
     return DisposableRawImage(
       image: uiImage,
       color: Colors.black,

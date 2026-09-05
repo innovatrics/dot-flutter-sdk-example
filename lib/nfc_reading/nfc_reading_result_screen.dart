@@ -9,19 +9,14 @@ import '../json_encoder_factory.dart';
 class NfcReadingResultScreen extends StatelessWidget {
   final TravelDocument travelDocument;
 
-  const NfcReadingResultScreen({
-    super.key,
-    required this.travelDocument,
-  });
+  const NfcReadingResultScreen({super.key, required this.travelDocument});
 
   @override
   Widget build(BuildContext context) {
     JsonEncoder jsonEncoder = JsonEncoderFactory.create();
     String jsonText = jsonEncoder.convert(travelDocument.toJson());
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('NFC Reading Result'),
-      ),
+      appBar: AppBar(title: const Text('NFC Reading Result')),
       body: SingleChildScrollView(
         child: Column(
           children: [

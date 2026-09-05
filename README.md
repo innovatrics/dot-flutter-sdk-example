@@ -1,10 +1,16 @@
-# DOT Flutter SDK Example
+# IDV Flutter SDK Example
 
-A collection of quickstart samples demonstrating the DOT Flutter SDK. [Read more about DOT Flutter SDK](https://developers.innovatrics.com/digital-onboarding/).
+A collection of quickstart samples demonstrating the IDV Flutter SDK. [Read more about IDV Flutter SDK](https://developers.innovatrics.com/digital-onboarding/).
+
+## Requirements
+
+- Flutter 3.47.0 or newer
+- iOS 15.0 or newer
+- Android: compile SDK 36, minimum API level 24
 
 ## Setup
 
-Choose your unique identifier (e.g. `com.company.dot.flutter.example`). This identifier is used as an Application ID (Android) and Bundle ID (iOS) in your host apps of the DOT Flutter SDK Example.
+Choose your unique identifier (e.g. `com.company.dot.flutter.example`). This identifier is used as an Application ID (Android) and Bundle ID (iOS) in your host apps of the IDV Flutter SDK Example.
 
 ### Setup for Android platform
 
@@ -43,7 +49,7 @@ applicationId 'com.company.dot.flutter.example'
 | **Smile Liveness**        | Basic component sample.                                                                                               |
 | **MagnifEye Liveness**    | Basic component sample.                                                                                               |
 
-In case when the samples do not work because of the expired DOT license, please contact `sales@innovatrics.com` in order to obtain a new license file.
+In case when the samples do not work because of the expired IDV license, please contact `sales@innovatrics.com` in order to obtain a new license file.
 
 ## Changelog
 

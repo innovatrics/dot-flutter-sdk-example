@@ -21,18 +21,12 @@ extension ImageExt on Image {
 
 extension ImageSizeExt on ImageSize {
   Map<String, dynamic> toJson() {
-    return {
-      'width': width,
-      'height': height,
-    };
+    return {'width': width, 'height': height};
   }
 }
 
 extension PointDoubleExt on PointDouble {
   Map<String, dynamic> toJson() {
-    return {
-      'x': x,
-      'y': y,
-    };
+    return {'x': x, 'y': y};
   }
 }

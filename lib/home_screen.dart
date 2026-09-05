@@ -14,9 +14,7 @@ import 'progress_widget.dart';
 import 'smile_liveness/smile_liveness_screen.dart';
 
 class HomeScreen extends StatefulWidget {
-  const HomeScreen({
-    super.key,
-  });
+  const HomeScreen({super.key});
 
   @override
   State<StatefulWidget> createState() {
@@ -39,8 +37,9 @@ class _HomeScreenState extends State<HomeScreen> {
       return;
     }
 
-    final ByteData licenseByteData =
-        await assetBundle.load('assets/dot_license.lic');
+    final ByteData licenseByteData = await assetBundle.load(
+      'assets/dot_license.lic',
+    );
     await DotSdk.instance.initialize(
       DotSdkConfiguration(
         licenseBytes: licenseByteData.buffer.asUint8List(),
@@ -61,9 +60,7 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text('DOT SDK Example'),
-      ),
+      appBar: AppBar(title: Text('IDV SDK Example')),
       body: Container(
         padding: EdgeInsets.all(16),
         child: FutureBuilder(
@@ -95,9 +92,9 @@ class _HomeScreenState extends State<HomeScreen> {
             title: 'Document Auto Capture',
             subtitle: 'Basic component sample.',
             onPressed: () {
-              Navigator.of(context).push(
-                createRouteWithoutAnimation(DocumentAutoCaptureScreen()),
-              );
+              Navigator.of(
+                context,
+              ).push(createRouteWithoutAnimation(DocumentAutoCaptureScreen()));
             },
           ),
           _createComponent(
@@ -105,32 +102,36 @@ class _HomeScreenState extends State<HomeScreen> {
             subtitle:
                 'Combination of Document Auto Capture component with enabled MRZ recognition and NFC Travel Document Reader component.',
             onPressed: () {
-              Navigator.of(context)
-                  .push(createRouteWithoutAnimation(PasswordCaptureScreen()));
+              Navigator.of(
+                context,
+              ).push(createRouteWithoutAnimation(PasswordCaptureScreen()));
             },
           ),
           _createComponent(
             title: 'Face Auto Capture',
             subtitle: 'Basic component sample.',
             onPressed: () {
-              Navigator.of(context)
-                  .push(createRouteWithoutAnimation(FaceAutoCaptureScreen()));
+              Navigator.of(
+                context,
+              ).push(createRouteWithoutAnimation(FaceAutoCaptureScreen()));
             },
           ),
           _createComponent(
             title: 'Smile Liveness',
             subtitle: 'Basic component sample.',
             onPressed: () {
-              Navigator.of(context)
-                  .push(createRouteWithoutAnimation(SmileLivenessScreen()));
+              Navigator.of(
+                context,
+              ).push(createRouteWithoutAnimation(SmileLivenessScreen()));
             },
           ),
           _createComponent(
             title: 'MagnifEye Liveness',
             subtitle: 'Basic component sample.',
             onPressed: () {
-              Navigator.of(context)
-                  .push(createRouteWithoutAnimation(MagnifEyeLivenessScreen()));
+              Navigator.of(
+                context,
+              ).push(createRouteWithoutAnimation(MagnifEyeLivenessScreen()));
             },
           ),
         ],

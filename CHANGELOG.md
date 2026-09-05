@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.18.0 - 2026-09-04
+### Changed
+- Update IDV SDK to 0.13.0
+- Minimum Flutter version to 3.47.0.
+- Minimum iOS version to 15.0.
+
 ## 0.17.0 - 2026-04-02
 ### Changed
 - Update DOT SDK to 0.12.0

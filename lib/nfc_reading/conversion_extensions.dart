@@ -9,8 +9,8 @@ extension TravelDocumentExt on TravelDocument {
       'accessControlProtocolUsed': accessControlProtocolUsed.name,
       'authenticationStatus': authenticationStatus.toJson(),
       'machineReadableZoneInformation': machineReadableZoneInformation.toJson(),
-      'encodedIdentificationFeaturesFace':
-          encodedIdentificationFeaturesFace.toJson(),
+      'encodedIdentificationFeaturesFace': encodedIdentificationFeaturesFace
+          .toJson(),
       'displayedSignatureOrUsualMark': displayedSignatureOrUsualMark?.toJson(),
       'additionalPersonalDetails': additionalPersonalDetails?.toJson(),
       'additionalDocumentDetails': additionalDocumentDetails?.toJson(),
@@ -21,9 +21,7 @@ extension TravelDocumentExt on TravelDocument {
 
 extension LdsMasterFileExt on LdsMasterFile {
   Map<String, dynamic> toJson() {
-    return {
-      'lds1eMrtdApplication': lds1eMrtdApplication.toJson(),
-    };
+    return {'lds1eMrtdApplication': lds1eMrtdApplication.toJson()};
   }
 }
 
@@ -33,8 +31,8 @@ extension Lds1eMrtdApplicationExt on Lds1eMrtdApplication {
       'comHeaderAndDataGroupPresenceInformation':
           comHeaderAndDataGroupPresenceInformation.toJson(),
       'sodDocumentSecurityObject': sodDocumentSecurityObject.toJson(),
-      'dg1MachineReadableZoneInformation':
-          dg1MachineReadableZoneInformation.toJson(),
+      'dg1MachineReadableZoneInformation': dg1MachineReadableZoneInformation
+          .toJson(),
       'dg2EncodedIdentificationFeaturesFace':
           dg2EncodedIdentificationFeaturesFace.toJson(),
       'dg3AdditionalIdentificationFeatureFingers':
@@ -42,8 +40,8 @@ extension Lds1eMrtdApplicationExt on Lds1eMrtdApplication {
       'dg4AdditionalIdentificationFeatureIrises':
           dg4AdditionalIdentificationFeatureIrises?.toJson(),
       'dg5DisplayedPortrait': dg5DisplayedPortrait?.toJson(),
-      'dg7DisplayedSignatureOrUsualMark':
-          dg7DisplayedSignatureOrUsualMark?.toJson(),
+      'dg7DisplayedSignatureOrUsualMark': dg7DisplayedSignatureOrUsualMark
+          ?.toJson(),
       'dg8DataFeatures': dg8DataFeatures?.toJson(),
       'dg9StructureFeatures': dg9StructureFeatures?.toJson(),
       'dg10SubstanceFeatures': dg10SubstanceFeatures?.toJson(),
@@ -60,28 +58,19 @@ extension Lds1eMrtdApplicationExt on Lds1eMrtdApplication {
 
 extension Lds1ElementaryFileExt on Lds1ElementaryFile {
   Map<String, dynamic> toJson() {
-    return {
-      'id': id.name,
-      'bytes': bytes?.toJson(),
-    };
+    return {'id': id.name, 'bytes': bytes?.toJson()};
   }
 }
 
 extension AuthenticationStatusExt on AuthenticationStatus {
   Map<String, dynamic> toJson() {
-    return {
-      'data': data.toJson(),
-      'chip': chip.toJson(),
-    };
+    return {'data': data.toJson(), 'chip': chip.toJson()};
   }
 }
 
 extension DataAuthenticationStatusExt on DataAuthenticationStatus {
   Map<String, dynamic> toJson() {
-    return {
-      'status': status.name,
-      'protocol': protocol.name,
-    };
+    return {'status': status.name, 'protocol': protocol.name};
   }
 }
 
@@ -177,8 +166,8 @@ extension Td3MachineReadableZoneExt on Td3MachineReadableZone {
       'dateOfExpiry': dateOfExpiry.toJson(),
       'nationality': nationality.toJson(),
       'name': name.toJson(),
-      'personalNumberOrOtherOptionalData':
-          personalNumberOrOtherOptionalData.toJson(),
+      'personalNumberOrOtherOptionalData': personalNumberOrOtherOptionalData
+          .toJson(),
       'compositeCheckDigit': compositeCheckDigit.toJson(),
     };
   }
@@ -222,17 +211,15 @@ extension NameOfHolderExt on NameOfHolder {
 extension EncodedIdentificationFeaturesFaceExt
     on EncodedIdentificationFeaturesFace {
   Map<String, dynamic> toJson() {
-    return {
-      'faceImage': faceImage?.toJson(),
-    };
+    return {'faceImage': faceImage?.toJson()};
   }
 }
 
 extension DisplayedSignatureOrUsualMarkExt on DisplayedSignatureOrUsualMark {
   Map<String, dynamic> toJson() {
     return {
-      'displayedSignatureOrUsualMarkImage':
-          displayedSignatureOrUsualMarkImage?.toJson(),
+      'displayedSignatureOrUsualMarkImage': displayedSignatureOrUsualMarkImage
+          ?.toJson(),
     };
   }
 }
@@ -272,8 +259,6 @@ extension AdditionalDocumentDetailsExt on AdditionalDocumentDetails {
 
 extension OptionalDetailsExt on OptionalDetails {
   Map<String, dynamic> toJson() {
-    return {
-      'content': content?.toJson(),
-    };
+    return {'content': content?.toJson()};
   }
 }

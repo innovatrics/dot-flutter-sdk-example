@@ -13,10 +13,7 @@ import 'resolve_authority_certificates_file_use_case.dart';
 class NfcReadingScreen extends StatefulWidget {
   final MachineReadableZone machineReadableZone;
 
-  const NfcReadingScreen({
-    super.key,
-    required this.machineReadableZone,
-  });
+  const NfcReadingScreen({super.key, required this.machineReadableZone});
 
   @override
   State<NfcReadingScreen> createState() => _NfcReadingScreenState();
@@ -29,16 +26,14 @@ class _NfcReadingScreenState extends State<NfcReadingScreen> {
   void initState() {
     super.initState();
     final assetBundle = DefaultAssetBundle.of(context);
-    _authorityCertificatesFile =
-        ResolveAuthorityCertificatesFileUseCase().resolve(assetBundle);
+    _authorityCertificatesFile = ResolveAuthorityCertificatesFileUseCase()
+        .resolve(assetBundle);
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('NFC Reading'),
-      ),
+      appBar: AppBar(title: const Text('NFC Reading')),
       body: Center(child: _createFutureNfcTravelDocumentReaderWidget()),
     );
   }
@@ -83,7 +78,7 @@ class _NfcReadingScreenState extends State<NfcReadingScreen> {
   }
 
   NfcTravelDocumentReaderWidgetConfiguration
-      _createNfcTravelDocumentReaderConfiguration(
+  _createNfcTravelDocumentReaderConfiguration(
     String? authorityCertificatesFilePath,
   ) {
     return NfcTravelDocumentReaderWidgetConfiguration(

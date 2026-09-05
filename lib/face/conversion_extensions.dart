@@ -56,10 +56,7 @@ extension FaceImageQualityExt on FaceImageQuality {
 
 extension FaceAttributeExt on FaceAttribute {
   Map<String, dynamic> toJson() {
-    return {
-      'score': score,
-      'arePreconditionsMet': arePreconditionsMet,
-    };
+    return {'score': score, 'arePreconditionsMet': arePreconditionsMet};
   }
 }
 
@@ -75,45 +72,31 @@ extension HeadPoseExt on HeadPose {
 
 extension HeadPoseAttributeExt on HeadPoseAttribute {
   Map<String, dynamic> toJson() {
-    return {
-      'angle': angle,
-      'arePreconditionsMet': arePreconditionsMet,
-    };
+    return {'angle': angle, 'arePreconditionsMet': arePreconditionsMet};
   }
 }
 
 extension WearablesExt on Wearables {
   Map<String, dynamic> toJson() {
-    return {
-      'glasses': glasses?.toJson(),
-    };
+    return {'glasses': glasses?.toJson()};
   }
 }
 
 extension GlassesExt on Glasses {
   Map<String, dynamic> toJson() {
-    return {
-      'score': score,
-      'arePreconditionsMet': arePreconditionsMet,
-    };
+    return {'score': score, 'arePreconditionsMet': arePreconditionsMet};
   }
 }
 
 extension ExpressionExt on Expression {
   Map<String, dynamic> toJson() {
-    return {
-      'eyes': eyes.toJson(),
-      'mouth': mouth?.toJson(),
-    };
+    return {'eyes': eyes.toJson(), 'mouth': mouth?.toJson()};
   }
 }
 
 extension EyesExpressionExt on EyesExpression {
   Map<String, dynamic> toJson() {
-    return {
-      'rightEye': rightEye?.toJson(),
-      'leftEye': leftEye?.toJson(),
-    };
+    return {'rightEye': rightEye?.toJson(), 'leftEye': leftEye?.toJson()};
   }
 }
 
@@ -149,18 +132,12 @@ extension FaceKeypointsExt on FaceKeypoints {
 
 extension FaceKeypointExt on FaceKeypoint {
   Map<String, dynamic> toJson() {
-    return {
-      'position': position.toJson(),
-      'score': score,
-    };
+    return {'position': position.toJson(), 'score': score};
   }
 }
 
 extension TemplateExt on Template {
   Map<String, dynamic> toJson() {
-    return {
-      'bytes': bytes.toJson(),
-      'version': version,
-    };
+    return {'bytes': bytes.toJson(), 'version': version};
   }
 }

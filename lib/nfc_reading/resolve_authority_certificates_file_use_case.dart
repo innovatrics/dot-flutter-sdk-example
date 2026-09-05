@@ -23,11 +23,14 @@ class ResolveAuthorityCertificatesFileUseCase {
     AssetBundle assetBundle,
     File file,
   ) async {
-    final ByteData byteData =
-        await assetBundle.load('assets/$_authorityCertificatesFilename');
+    final ByteData byteData = await assetBundle.load(
+      'assets/$_authorityCertificatesFilename',
+    );
     await file.writeAsBytes(
-      byteData.buffer
-          .asUint8List(byteData.offsetInBytes, byteData.lengthInBytes),
+      byteData.buffer.asUint8List(
+        byteData.offsetInBytes,
+        byteData.lengthInBytes,
+      ),
     );
   }
 }

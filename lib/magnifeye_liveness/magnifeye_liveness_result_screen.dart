@@ -12,10 +12,7 @@ class MagnifEyeLivenessResultScreen extends StatelessWidget {
 
   late final Future<RawImage> _image;
 
-  MagnifEyeLivenessResultScreen({
-    super.key,
-    required this.result,
-  }) {
+  MagnifEyeLivenessResultScreen({super.key, required this.result}) {
     _image = getImageFromResult(result);
   }
 
@@ -25,9 +22,7 @@ class MagnifEyeLivenessResultScreen extends StatelessWidget {
     String jsonText = jsonEncoder.convert(result.toJson());
 
     return Scaffold(
-      appBar: AppBar(
-        title: Text('MagnifEye Liveness Result'),
-      ),
+      appBar: AppBar(title: Text('MagnifEye Liveness Result')),
       body: SingleChildScrollView(
         child: Column(
           children: [

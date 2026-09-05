@@ -12,10 +12,7 @@ class SmileLivenessResultScreen extends StatelessWidget {
 
   late final Future<RawImage> _image;
 
-  SmileLivenessResultScreen({
-    super.key,
-    required this.result,
-  }) {
+  SmileLivenessResultScreen({super.key, required this.result}) {
     _image = getImageFromResult(result);
   }
 
@@ -25,9 +22,7 @@ class SmileLivenessResultScreen extends StatelessWidget {
     String jsonText = jsonEncoder.convert(result.toJson());
 
     return Scaffold(
-      appBar: AppBar(
-        title: Text('Smile Liveness Result'),
-      ),
+      appBar: AppBar(title: Text('Smile Liveness Result')),
       body: SingleChildScrollView(
         child: Column(
           children: [

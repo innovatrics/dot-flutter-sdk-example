@@ -5,16 +5,12 @@ import '../page_routes.dart';
 import 'face_auto_capture_result_screen.dart';
 
 class FaceAutoCaptureScreen extends StatelessWidget {
-  const FaceAutoCaptureScreen({
-    super.key,
-  });
+  const FaceAutoCaptureScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text('Face Auto Capture'),
-      ),
+      appBar: AppBar(title: Text('Face Auto Capture')),
       body: FaceAutoCaptureWidget(
         configuration: FaceAutoCaptureWidgetConfiguration(
           base: BaseFaceAutoCaptureWidgetConfiguration(
@@ -35,9 +31,7 @@ class FaceAutoCaptureScreen extends StatelessWidget {
                     evaluateYaw: true,
                     evaluatePitch: true,
                   ),
-                  wearables: WearablesQuery(
-                    evaluateGlasses: true,
-                  ),
+                  wearables: WearablesQuery(evaluateGlasses: true),
                   expression: ExpressionQuery(
                     eyes: EyesExpressionQuery(
                       evaluateRightEye: true,

@@ -5,31 +5,26 @@ import '../page_routes.dart';
 import 'nfc_reading_screen.dart';
 
 class PasswordCaptureScreen extends StatelessWidget {
-  const PasswordCaptureScreen({
-    super.key,
-  });
+  const PasswordCaptureScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('Password Capture'),
-      ),
+      appBar: AppBar(title: const Text('Password Capture')),
       body: DocumentAutoCaptureWidget(
         configuration: _createDocumentAutoCaptureConfiguration(),
         onCreated: (controller) => controller.start(),
         onFinished: (result) => Navigator.of(context).pushReplacement(
           createRoute(
-            NfcReadingScreen(
-              machineReadableZone: result.machineReadableZone!,
-            ),
+            NfcReadingScreen(machineReadableZone: result.machineReadableZone!),
           ),
         ),
       ),
     );
   }
 
-  DocumentAutoCaptureWidgetConfiguration _createDocumentAutoCaptureConfiguration() {
+  DocumentAutoCaptureWidgetConfiguration
+  _createDocumentAutoCaptureConfiguration() {
     return DocumentAutoCaptureWidgetConfiguration(
       base: BaseDocumentAutoCaptureWidgetConfiguration(
         mrzValidation: MrzValidation.requirePresenceAndValidity,

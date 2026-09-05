@@ -5,23 +5,17 @@ import '../page_routes.dart';
 import 'smile_liveness_result_screen.dart';
 
 class SmileLivenessScreen extends StatelessWidget {
-  const SmileLivenessScreen({
-    super.key,
-  });
+  const SmileLivenessScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text('Smile Liveness'),
-      ),
+      appBar: AppBar(title: Text('Smile Liveness')),
       body: SmileLivenessWidget(
         configuration: SmileLivenessWidgetConfiguration(),
         onCreated: (controller) => controller.start(),
         onFinished: (result) => Navigator.of(context).pushReplacement(
-          createRoute(
-            SmileLivenessResultScreen(result: result),
-          ),
+          createRoute(SmileLivenessResultScreen(result: result)),
         ),
       ),
     );

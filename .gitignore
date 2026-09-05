@@ -1,10 +1,13 @@
 assets/dot_license.lic
 .cxx
 .dart_tool
+.depcache
+.dot-flutter-sdk
 .flutter-plugins
 .flutter-plugins-dependencies
 .gradle
 .idea
+.toolchain
 **/build/
 **/gradlew
 **/gradlew.bat
